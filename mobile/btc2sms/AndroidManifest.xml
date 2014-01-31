@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="30" android:versionName="0.1.0-SNAPSHOT" package="org.btc4all.btc2sms">
+         
+    <uses-sdk android:minSdkVersion="4"/>
+         
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>              
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>              
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>     
+    <uses-permission android:name="android.permission.RECEIVE_MMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <application android:debuggable="true" android:icon="@drawable/icon" android:label="@string/app_name" android:name="org.btc4all.btc2sms.App">
+        <activity android:label="@string/app_name" android:name="org.btc4all.btc2sms.ui.Main" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>        
+
+        <activity android:label="@string/log_view_title" android:name="org.btc4all.btc2sms.ui.LogView">
+        </activity>        
+
+        <activity android:label="@string/help_title" android:name="org.btc4all.btc2sms.ui.Help">
+        </activity>        
+
+        <activity android:label="@string/test_phone_numbers_title" android:name="org.btc4all.btc2sms.ui.TestPhoneNumbers">
+        </activity>                
+        
+        <activity android:label="@string/ignored_phone_numbers_title" android:name="org.btc4all.btc2sms.ui.IgnoredPhoneNumbers">
+        </activity>                        
+        
+        <activity android:label="@string/forward_saved_title" android:name="org.btc4all.btc2sms.ui.MessagingSmsInbox">
+        </activity>        
+
+        <activity android:label="@string/forward_saved_title" android:name="org.btc4all.btc2sms.ui.MessagingMmsInbox">
+        </activity>        
+        
+        <activity android:label="@string/forward_saved_title" android:name="org.btc4all.btc2sms.ui.MessagingSentSms">
+        </activity>
+        
+        <activity android:label="@string/pending_messages_title" android:name="org.btc4all.btc2sms.ui.PendingMessages">
+        </activity>
+
+        <activity android:label="@string/settings_title" android:name="org.btc4all.btc2sms.ui.Prefs">
+        </activity>
+        
+        <activity android:label="..." android:name="org.btc4all.btc2sms.ui.ExpansionPacks">
+        </activity>        
+
+        <receiver android:name="org.btc4all.btc2sms.receiver.SmsReceiver">
+            <intent-filter android:priority="101">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver> 	
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.OutgoingSmsReceiver">
+            <intent-filter>
+                <action android:name="org.btc4all.btc2sms.OUTGOING_SMS"/>
+                <data android:scheme="content"/>
+            </intent-filter>            
+        </receiver>
+        
+        <receiver android:exported="true" android:name="org.btc4all.btc2sms.receiver.MessageStatusNotifier">
+            <intent-filter>
+                <action android:name="org.btc4all.btc2sms.MESSAGE_STATUS"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:exported="true" android:name="org.btc4all.btc2sms.receiver.NudgeReceiver">
+            <intent-filter>
+                <action android:name="org.btc4all.btc2sms.NUDGE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/> 
+            </intent-filter>
+        </receiver>       
+        
+        <!-- 
+            we don't really use message delivery notifications yet...
+            
+        <receiver android:name=".receiver.MessageDeliveryNotifier" android:exported="true">
+            <intent-filter>
+                <action android:name="org.envaya.sms.MESSAGE_DELIVERY" />
+                <data android:scheme="content" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <receiver android:name="org.btc4all.btc2sms.receiver.DequeueOutgoingMessageReceiver">
+        </receiver>
+
+        <receiver android:name="org.btc4all.btc2sms.receiver.OutgoingMessageTimeout">
+        </receiver>
+
+        <receiver android:name="org.btc4all.btc2sms.receiver.OutgoingMessagePoller">
+        </receiver>
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.OutgoingMessageRetry">
+        </receiver>        
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.IncomingMessageRetry">
+        </receiver>            
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.ReenableWifiReceiver">
+        </receiver>
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.StartAmqpConsumer">
+        </receiver>
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.ExpansionPackInstallReceiver">
+            <intent-filter> 
+                 <action android:name="android.intent.action.PACKAGE_ADDED"/> 
+                 <action android:name="android.intent.action.PACKAGE_REMOVED"/> 
+                 <action android:name="android.intent.action.PACKAGE_REPLACED"/> 
+                 <data android:scheme="package"/>
+            </intent-filter>            
+        </receiver>        
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.ConnectivityChangeReceiver">        
+            <intent-filter> 
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter> 
+        </receiver>         
+        
+        <receiver android:name="org.btc4all.btc2sms.receiver.DeviceStatusReceiver"> 
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+            </intent-filter>
+        </receiver>
+        
+        <service android:name="org.btc4all.btc2sms.service.CheckMessagingService">
+        </service>
+
+        <service android:name="org.btc4all.btc2sms.service.EnabledChangedService">
+        </service>
+
+        <service android:name="org.btc4all.btc2sms.service.ForegroundService">
+        </service>            
+        
+        <service android:name="org.btc4all.btc2sms.service.AmqpConsumerService">
+        </service>                    
+        
+        <service android:name="org.btc4all.btc2sms.service.AmqpHeartbeatService">
+        </service>                            
+    </application>
+</manifest>

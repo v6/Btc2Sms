@@ -3,3 +3,7 @@ gen
 nbandroid
 private
 local.properties
+target
+.settings
+.project
+.classpath
