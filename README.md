@@ -10,6 +10,10 @@ EnvayaSMS architecture was a central control server. The objective is to get rid
 
 set <sdk><path> in mobile/pom.xml, then build with mvn clean install
 
+## Tip4Commit
+
+[![tip for next commit](http://tip4commit.com/projects/530.svg)](http://tip4commit.com/projects/530)
+
 ## Old
 
 
