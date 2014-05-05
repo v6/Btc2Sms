@@ -10,23 +10,25 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
+import android.util.Log;
+import android.view.*;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import org.apache.http.HttpResponse;
 import org.apache.http.message.BasicNameValuePair;
 import org.btc4all.btc2sms.App;
-import org.btc4all.btc2sms.task.HttpTask;
+import org.btc4all.btc2sms.BuildConfig;
 import org.btc4all.btc2sms.R;
-import java.util.ArrayList;
+import org.btc4all.btc2sms.task.HttpTask;
+
 import java.util.List;
 
-public class LogView extends Activity {   
-	
+public class LogView extends Activity {
+
     private App app;
     
     private BroadcastReceiver logReceiver = new BroadcastReceiver() {
@@ -46,22 +48,26 @@ public class LogView extends Activity {
     
     private BroadcastReceiver expansionPacksReceiver = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, Intent intent) {  
+        public void onReceive(Context context, Intent intent) {
             updateInfo();
         }
     };        
-    
+
     private ScrollView scrollView;
     private TextView info;
     private TextView log;
     private TextView heading;
+    private WebView loginWebView;
+    private LinearLayout logLayout;
+
+    private boolean firstTimeLoad;
     
     private class TestTask extends HttpTask
     {
         public TestTask() {
             super(LogView.this.app, new BasicNameValuePair("action", App.ACTION_TEST));   
         }
-        
+
         @Override
         protected void handleResponse(HttpResponse response) throws Exception 
         {
@@ -73,7 +79,7 @@ public class LogView extends Activity {
 
     public void updateUpgradeButton()
     {
-        Button upgradeButton = (Button) this.findViewById(R.id.upgrade_button);        
+        Button upgradeButton = (Button) this.findViewById(R.id.upgrade_button);
         boolean isUpgradeAvailable = app.isUpgradeAvailable();                
         if (isUpgradeAvailable)
         {
@@ -115,40 +121,106 @@ public class LogView extends Activity {
             scrollView.fullScroll(View.FOCUS_DOWN);
         } });
     }
-            
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-        app = (App) getApplication();
-        
-        setContentView(R.layout.log_view);
-        PreferenceManager.setDefaultValues(this, R.xml.prefs, false);               
-                        
-        scrollView = (ScrollView) this.findViewById(R.id.log_scroll);
-        
-        heading = (TextView) this.findViewById(R.id.heading);   
-        info = (TextView) this.findViewById(R.id.info);   
-        
+
+    private void preLoad(final Bundle savedInstanceState) {
+
+        setContentView(R.layout.splash);
+        LayoutInflater li = getLayoutInflater();
+        logLayout = (LinearLayout) li.inflate(R.layout.log_view, null);
+        loginWebView = (WebView) logLayout.findViewById(R.id.login_web_view);
+        WebSettings webSettings = loginWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        class AndroidJS {
+
+            public void loadComplete() {
+                Log.d("JS", "load complete");
+                Thread viewThread = new Thread() {
+                    public void run() {
+                        runOnUiThread(new Runnable() {
+                            public void run() {
+                                setContentView(logLayout);
+                                loginWebView.setVisibility(1);
+                                if (firstTimeLoad) {
+                                    firstTimeLoad = false;
+                                    continueLoading(savedInstanceState);
+                                }
+                            }
+                        });
+                    }
+                };
+                viewThread.start();
+            }
+
+            public void setConfig(String basePath, String cn, String mobile, String apiSecret, String servicePath, String password) {
+                SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(LogView.this);
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putString("server_url", String.format("%s/envayasms/%s/sms", basePath, cn));
+                editor.putString("phone_number", mobile);
+                editor.putString("password", apiSecret);
+                editor.putString("outgoing_interval", "0");
+                editor.putBoolean("keep_in_inbox", false);
+                editor.putBoolean("call_notifications", false);
+                editor.putString("send_limit", "400");
+                editor.putBoolean("forward_sent", false);
+                editor.putBoolean("test_mode", false);
+                editor.putString("wifi_sleep_policy", "always stay connected");
+                editor.putBoolean("network_failover", true);
+                editor.putBoolean("amqp_enabled", true);
+                editor.putString("amqp_host", servicePath);
+                editor.putString("amqp_port", "5672");
+                editor.putString("amqp_vhost", "/");
+                editor.putBoolean("amqp_ssl", false);
+                editor.putString("amqp_user", cn);
+                editor.putString("amqp_password", password);
+                editor.putString("amqp_queue", cn);
+                editor.putString("amqp_heartbeat", "60");
+                editor.putBoolean("enabled", true);
+                editor.commit();
+                Thread viewThread = new Thread() {
+                    public void run() {
+                        runOnUiThread(new Runnable() {
+                            public void run() {
+                                updateInfo();
+                            }
+                        });
+                    }
+                };
+                viewThread.start();
+            }
+        }
+        loginWebView.addJavascriptInterface(new AndroidJS(), "Android");
+
+        loginWebView.loadUrl("https://www.37coins.com/gateways?noHead=true");
+        Log.d("TEST", "pre load finish");
+    }
+
+    private void continueLoading(Bundle savedInstanceState)
+    {
+        registerReceiver(logReceiver, new IntentFilter(App.LOG_CHANGED_INTENT));
+        registerReceiver(settingsReceiver, new IntentFilter(App.SETTINGS_CHANGED_INTENT));
+        registerReceiver(expansionPacksReceiver, new IntentFilter(App.EXPANSION_PACKS_CHANGED_INTENT));
+
+        PreferenceManager.setDefaultValues(this, R.xml.prefs, false);
+
+        heading = (TextView) this.findViewById(R.id.heading);
+        info = (TextView) this.findViewById(R.id.info);
+
         updateInfo();
-        
-        log = (TextView) this.findViewById(R.id.log);        
-        
+
+        scrollView = (ScrollView) this.findViewById(R.id.log_scroll);
+
+        log = (TextView) this.findViewById(R.id.log);
         log.setMovementMethod(LinkMovementMethod.getInstance());
-        
+
         updateUpgradeButton();
         updateLogView();
-        
-        registerReceiver(logReceiver, new IntentFilter(App.LOG_CHANGED_INTENT));        
-        registerReceiver(settingsReceiver, new IntentFilter(App.SETTINGS_CHANGED_INTENT));        
-        registerReceiver(expansionPacksReceiver, new IntentFilter(App.EXPANSION_PACKS_CHANGED_INTENT));        
+
 
         if (savedInstanceState == null)
         {
             if (app.isUpgradeAvailable())
             {
-                showUpgradeDialog();         
+                showUpgradeDialog();
             }
         }
         else
@@ -156,13 +228,26 @@ public class LogView extends Activity {
             curDialog = savedInstanceState.getInt("cur_dialog", 0);
             if (curDialog == UPGRADE_DIALOG)
             {
-                showUpgradeDialog();                
-            }            
+                showUpgradeDialog();
+            }
             else if (curDialog == SETTINGS_DIALOG)
             {
                 showSettingsDialog();
             }
         }
+    }
+            
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        app = (App) getApplication();
+
+        firstTimeLoad = true;
+
+        preLoad(savedInstanceState);
+
     }
 
     public static final int NO_DIALOG = 0;
@@ -175,7 +260,6 @@ public class LogView extends Activity {
     public void updateInfo()
     {       
         boolean enabled = app.isEnabled();
-        
         heading.setText(Html.fromHtml(
              enabled ? "<b>" + getText(R.string.running) + " ("+app.getPhoneNumber()+")</b>" 
                 : "<b>" +getText(R.string.disabled) + "</b>"));       
@@ -316,7 +400,7 @@ public class LogView extends Activity {
     
     @Override
     public void onDestroy()
-    {        
+    {
         unregisterReceiver(logReceiver);        
         unregisterReceiver(settingsReceiver);
         unregisterReceiver(expansionPacksReceiver);
@@ -356,18 +440,24 @@ public class LogView extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.mainmenu, menu);
+        if (BuildConfig.DEBUG) {
+            inflater.inflate(R.menu.mainmenu_debug, menu);
+        } else
+        {
+            inflater.inflate(R.menu.mainmenu, menu);
+        }
         
         return(true);
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem retryItem = menu.findItem(R.id.retry_now);
-        int pendingTasks = app.getPendingTaskCount();
-        retryItem.setEnabled(pendingTasks > 0);
-        retryItem.setTitle("Retry All (" + pendingTasks + ")");
-        
+        if (BuildConfig.DEBUG) {
+            MenuItem retryItem = menu.findItem(R.id.retry_now);
+            int pendingTasks = app.getPendingTaskCount();
+            retryItem.setEnabled(pendingTasks > 0);
+            retryItem.setTitle("Retry All (" + pendingTasks + ")");
+        }
         return true;
     }
     
