@@ -8,7 +8,7 @@ EnvayaSMS architecture was a central control server. The objective is to get rid
 
 ## Build
 
-set <sdk><path> in mobile/pom.xml, then build with mvn clean install
+set `<sdk><path>` in `mobile/pom.xml`, then build with `mvn clean install`
 
 ## Tip4Commit
 
@@ -26,6 +26,6 @@ This project uses ant (or NetBeans) as the build tool.
 Before building, first create a local.properties file in the project root directory,
 and set sdk.dir to the path of your android sdk, e.g.:
 
-sdk.dir=C:\\android-sdk
+`sdk.dir=C:\\android-sdk`
 
 The code is released under the MIT license; see LICENSE
