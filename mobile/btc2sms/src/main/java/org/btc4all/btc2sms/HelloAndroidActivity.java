@@ -2,8 +2,8 @@ package org.btc4all.btc2sms;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
+import org.btc4all.btc2sms.R;
 
 public class HelloAndroidActivity extends Activity {
 
