@@ -39,9 +39,9 @@ public abstract class MessagingForwarder extends ListActivity {
         setContentView(R.layout.inbox);
         
         final String[] inboxTypeClasses = new String[] {
-                "org.envaya.sms.ui.MessagingSmsInbox", 
-                "org.envaya.sms.ui.MessagingMmsInbox",
-                "org.envaya.sms.ui.MessagingSentSms",
+                "org.btc4all.btc2sms.ui.MessagingSmsInbox",
+                "org.btc4all.btc2sms.ui.MessagingMmsInbox",
+                "org.btc4all.btc2sms.ui.MessagingSentSms",
         };
         
         final String[] inboxTypeNames = new String[] {
@@ -50,7 +50,7 @@ public abstract class MessagingForwarder extends ListActivity {
                 "Sent SMS"
         };
                 
-        Spinner spinner = (Spinner) findViewById(R.id.inbox_selector);        
+        Spinner spinner = (Spinner) findViewById(R.id.inbox_selector);
         
         ArrayAdapter<String> inboxTypeAdapter = new ArrayAdapter<String>(this,
             android.R.layout.simple_spinner_item, inboxTypeNames);
