@@ -21,7 +21,6 @@ import android.widget.TextView;
 import org.apache.http.HttpResponse;
 import org.apache.http.message.BasicNameValuePair;
 import org.btc4all.btc2sms.App;
-import org.btc4all.btc2sms.BuildConfig;
 import org.btc4all.btc2sms.R;
 import org.btc4all.btc2sms.task.HttpTask;
 
@@ -61,6 +60,7 @@ public class LogView extends Activity {
     private LinearLayout logLayout;
 
     private boolean firstTimeLoad;
+    private boolean debugMode;
     
     private class TestTask extends HttpTask
     {
@@ -431,6 +431,16 @@ public class LogView extends Activity {
             app.log("Testing server connection...");
             new TestTask().execute();
             return true;
+        case R.id.debug_on:
+            debugMode = true;
+            loginWebView.setVisibility(View.GONE);
+            invalidateOptionsMenu();
+            return true;
+        case R.id.debug_off:
+            debugMode = false;
+            loginWebView.setVisibility(View.VISIBLE);
+            invalidateOptionsMenu();
+            return true;
         default:
             return super.onOptionsItemSelected(item);
         }
@@ -440,19 +450,17 @@ public class LogView extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        if (BuildConfig.DEBUG) {
-            inflater.inflate(R.menu.mainmenu_debug, menu);
-        } else
-        {
+        if (!debugMode) {
             inflater.inflate(R.menu.mainmenu, menu);
+        } else {
+            inflater.inflate(R.menu.mainmenu_debug, menu);
         }
-        
         return(true);
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        if (BuildConfig.DEBUG) {
+        if (debugMode) {
             MenuItem retryItem = menu.findItem(R.id.retry_now);
             int pendingTasks = app.getPendingTaskCount();
             retryItem.setEnabled(pendingTasks > 0);
