@@ -58,6 +58,7 @@ public class LogView extends Activity {
     private TextView heading;
     private WebView loginWebView;
     private LinearLayout logLayout;
+    private Menu appMenu;
 
     private boolean firstTimeLoad;
     private boolean debugMode;
@@ -122,7 +123,7 @@ public class LogView extends Activity {
         } });
     }
 
-    private void preLoad(final Bundle savedInstanceState) {
+    private void loadWebView(final Bundle savedInstanceState) {
 
         setContentView(R.layout.splash);
         LayoutInflater li = getLayoutInflater();
@@ -196,9 +197,6 @@ public class LogView extends Activity {
 
     private void continueLoading(Bundle savedInstanceState)
     {
-        registerReceiver(logReceiver, new IntentFilter(App.LOG_CHANGED_INTENT));
-        registerReceiver(settingsReceiver, new IntentFilter(App.SETTINGS_CHANGED_INTENT));
-        registerReceiver(expansionPacksReceiver, new IntentFilter(App.EXPANSION_PACKS_CHANGED_INTENT));
 
         PreferenceManager.setDefaultValues(this, R.xml.prefs, false);
 
@@ -246,7 +244,11 @@ public class LogView extends Activity {
 
         firstTimeLoad = true;
 
-        preLoad(savedInstanceState);
+        registerReceiver(logReceiver, new IntentFilter(App.LOG_CHANGED_INTENT));
+        registerReceiver(settingsReceiver, new IntentFilter(App.SETTINGS_CHANGED_INTENT));
+        registerReceiver(expansionPacksReceiver, new IntentFilter(App.EXPANSION_PACKS_CHANGED_INTENT));
+
+        loadWebView(savedInstanceState);
 
     }
 
@@ -434,12 +436,12 @@ public class LogView extends Activity {
         case R.id.debug_on:
             debugMode = true;
             loginWebView.setVisibility(View.GONE);
-            invalidateOptionsMenu();
+            onCreateOptionsMenu(appMenu);
             return true;
         case R.id.debug_off:
             debugMode = false;
             loginWebView.setVisibility(View.VISIBLE);
-            invalidateOptionsMenu();
+            onCreateOptionsMenu(appMenu);
             return true;
         default:
             return super.onOptionsItemSelected(item);
@@ -449,6 +451,8 @@ public class LogView extends Activity {
     // first time the Menu key is pressed
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        appMenu = menu;
+        menu.clear();
         MenuInflater inflater = getMenuInflater();
         if (!debugMode) {
             inflater.inflate(R.menu.mainmenu, menu);
