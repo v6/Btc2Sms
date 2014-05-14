@@ -141,6 +141,7 @@ public class LogView extends Activity {
                             public void run() {
                                 setContentView(logLayout);
                                 loginWebView.setVisibility(1);
+                                loginWebView.requestFocus(View.FOCUS_DOWN);
                                 if (firstTimeLoad) {
                                     firstTimeLoad = false;
                                     continueLoading(savedInstanceState);
