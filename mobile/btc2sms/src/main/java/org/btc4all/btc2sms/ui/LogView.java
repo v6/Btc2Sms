@@ -8,6 +8,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.FragmentActivity;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
@@ -58,7 +59,6 @@ public class LogView extends Activity {
     private TextView heading;
     private WebView loginWebView;
     private LinearLayout logLayout;
-    private Menu appMenu;
 
     private boolean firstTimeLoad;
     private boolean debugMode;
@@ -123,7 +123,7 @@ public class LogView extends Activity {
         } });
     }
 
-    private void loadWebView(final Bundle savedInstanceState) {
+    private void preLoad(final Bundle savedInstanceState) {
 
         setContentView(R.layout.splash);
         LayoutInflater li = getLayoutInflater();
@@ -141,7 +141,6 @@ public class LogView extends Activity {
                             public void run() {
                                 setContentView(logLayout);
                                 loginWebView.setVisibility(1);
-                                loginWebView.requestFocus(View.FOCUS_DOWN);
                                 if (firstTimeLoad) {
                                     firstTimeLoad = false;
                                     continueLoading(savedInstanceState);
@@ -198,6 +197,9 @@ public class LogView extends Activity {
 
     private void continueLoading(Bundle savedInstanceState)
     {
+        registerReceiver(logReceiver, new IntentFilter(App.LOG_CHANGED_INTENT));
+        registerReceiver(settingsReceiver, new IntentFilter(App.SETTINGS_CHANGED_INTENT));
+        registerReceiver(expansionPacksReceiver, new IntentFilter(App.EXPANSION_PACKS_CHANGED_INTENT));
 
         PreferenceManager.setDefaultValues(this, R.xml.prefs, false);
 
@@ -245,11 +247,7 @@ public class LogView extends Activity {
 
         firstTimeLoad = true;
 
-        registerReceiver(logReceiver, new IntentFilter(App.LOG_CHANGED_INTENT));
-        registerReceiver(settingsReceiver, new IntentFilter(App.SETTINGS_CHANGED_INTENT));
-        registerReceiver(expansionPacksReceiver, new IntentFilter(App.EXPANSION_PACKS_CHANGED_INTENT));
-
-        loadWebView(savedInstanceState);
+        preLoad(savedInstanceState);
 
     }
 
@@ -418,18 +416,6 @@ public class LogView extends Activity {
         case R.id.settings:
             startActivity(new Intent(this, Prefs.class));
             return true;
-        case R.id.check_now:              
-            app.checkOutgoingMessages();
-            return true;
-        case R.id.retry_now:                            
-            app.retryStuckMessages();
-            return true; 
-        case R.id.forward_saved:
-            startActivity(new Intent(this, MessagingSmsInbox.class));
-            return true;
-        case R.id.pending:
-            startActivity(new Intent(this, PendingMessages.class));
-            return true;
         case R.id.test:            
             app.log("Testing server connection...");
             new TestTask().execute();
@@ -437,12 +423,12 @@ public class LogView extends Activity {
         case R.id.debug_on:
             debugMode = true;
             loginWebView.setVisibility(View.GONE);
-            onCreateOptionsMenu(appMenu);
+            new FragmentActivity().invalidateOptionsMenu();
             return true;
         case R.id.debug_off:
             debugMode = false;
             loginWebView.setVisibility(View.VISIBLE);
-            onCreateOptionsMenu(appMenu);
+            new FragmentActivity().invalidateOptionsMenu();
             return true;
         default:
             return super.onOptionsItemSelected(item);
@@ -452,8 +438,6 @@ public class LogView extends Activity {
     // first time the Menu key is pressed
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        appMenu = menu;
-        menu.clear();
         MenuInflater inflater = getMenuInflater();
         if (!debugMode) {
             inflater.inflate(R.menu.mainmenu, menu);
@@ -461,17 +445,6 @@ public class LogView extends Activity {
             inflater.inflate(R.menu.mainmenu_debug, menu);
         }
         return(true);
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        if (debugMode) {
-            MenuItem retryItem = menu.findItem(R.id.retry_now);
-            int pendingTasks = app.getPendingTaskCount();
-            retryItem.setEnabled(pendingTasks > 0);
-            retryItem.setTitle("Retry All (" + pendingTasks + ")");
-        }
-        return true;
     }
     
 }

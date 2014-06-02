@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     
-    public static final String DATABASE_NAME = "envayasms.db";
+    public static final String DATABASE_NAME = "btc2sms.db";
     public static final int DATABASE_VERSION = 4;        
     
     private App app;
