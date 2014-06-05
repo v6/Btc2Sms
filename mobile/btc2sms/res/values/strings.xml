@@ -32,5 +32,7 @@ in the normal Messaging inbox.)</string>
 SMSgateway will ignore SMS messages from the phone numbers listed below. 
 Incoming messages from these senders will be saved in the normal Messaging inbox.</string>
     <string name='splash_loading'>Loading...</string>
+    <string name="debug_on">Debug on</string>
+    <string name="debug_off">Debug off</string>
 
 </resources>

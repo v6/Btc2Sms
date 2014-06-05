@@ -12,7 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<platform.version> 4.1.1.4
 					</platform.version>
-		<android.plugin.version>3.6.0</android.plugin.version>
+		<android.plugin.version>3.8.0</android.plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -60,7 +60,6 @@
 					<configuration>
 						<sdk>
 							<platform>17</platform>
-            				<path>/Users/johann/adtBundleMac/sdk/</path>
 						</sdk>
 												<zipalign>
 							<verbose>true</verbose>
