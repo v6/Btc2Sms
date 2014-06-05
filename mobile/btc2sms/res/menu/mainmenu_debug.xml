@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/debug_off"
+          android:icon="@drawable/ic_menu_puzzle"
+          android:title="@string/debug_off"/>
     <item android:id="@+id/settings"
           android:icon="@drawable/ic_menu_equalizer"
           android:title="@string/settings" />
     <item android:id="@+id/test"
           android:icon="@drawable/ic_menu_link"
           android:title="@string/test" />
-    <item android:id="@+id/debug_off"
-          android:icon="@drawable/ic_menu_puzzle"
-          android:title="@string/debug_off"/>
 </menu>

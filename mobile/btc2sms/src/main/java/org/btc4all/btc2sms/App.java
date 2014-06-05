@@ -99,7 +99,7 @@ public final class App extends Application {
     // intent for MessageStatusNotifier to receive status updates for outgoing SMS
     // (even if sent by an expansion pack)
     public static final String MESSAGE_STATUS_INTENT = "org.btc4all.btc2sms.MESSAGE_STATUS";
-    public static final String MESSAGE_DELIVERY_INTENT = "org.btc4all.btc2sms.MESSAGE_DELIVERY";    
+    public static final String MESSAGE_DELIVERY_INTENT = "org.btc4all.btc2sms.MESSAGE_DELIVERY";
     
     public static final String STATUS_EXTRA_INDEX = "status";
     public static final String STATUS_EXTRA_NUM_PARTS = "num_parts";            
@@ -113,7 +113,7 @@ public final class App extends Application {
     public static final int MESSAGE_SEND_TIMEOUT = 30000; // ms
     
     // Each QueuedMessage is identified within our internal Map by its Uri.
-    // Currently QueuedMessage instances are only available within Btc2SMS,
+    // Currently QueuedMessage instances are only available within Btc2Sms,
     // (but they could be made available to other applications later via a ContentProvider)
     public static final Uri CONTENT_URI = Uri.parse("content://org.btc4all.btc2sms");
     public static final Uri INCOMING_URI = Uri.withAppendedPath(CONTENT_URI, "incoming");
