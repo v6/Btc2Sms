@@ -1,8 +1,6 @@
 package org.btc4all.gateway.resources;
 
 import javax.inject.Inject;
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -14,10 +12,9 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class PlivoResource {
     public final static String PATH = "/plivo";
-    private HttpServletRequest httpReq;
     
-    @Inject public PlivoResource(ServletRequest request){
-        httpReq = (HttpServletRequest)request;
+    @Inject 
+    public PlivoResource(){
     }
     
     @POST

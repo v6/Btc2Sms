@@ -1,8 +1,14 @@
 package org.btc4all.gateway;
 
 
+import javax.inject.Named;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
+
+import net.sf.ehcache.Cache;
+import net.sf.ehcache.CacheManager;
+import net.sf.ehcache.config.CacheConfiguration;
+import net.sf.ehcache.store.MemoryStoreEvictionPolicy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,6 +61,20 @@ public class GatewayServletConfig extends GuiceServletContextListener {
             protected void configureServlets(){
             	filter("/plivo*").through(PlivoAuthFilter.class);
         	}
+            @Provides @Singleton @SuppressWarnings("unused")
+            public Cache provideHourCache(){
+                //Create a singleton CacheManager using defaults
+                CacheManager manager = CacheManager.create();
+                //Create a Cache specifying its configuration.
+                Cache testCache = new Cache(new CacheConfiguration("hour", 1000)
+                    .memoryStoreEvictionPolicy(MemoryStoreEvictionPolicy.LFU)
+                    .eternal(false)
+                    .timeToLiveSeconds(7200)
+                    .timeToIdleSeconds(3600)
+                    .diskExpiryThreadIntervalSeconds(0));
+                manager.addCache(testCache);
+                return testCache;
+            }
             @Provides @Singleton @SuppressWarnings("unused")
             public PlivoAuthFilter providePlivoFilter(){
                 return new PlivoAuthFilter(GatewayServletConfig.plivoSecret, GatewayServletConfig.basePath);
