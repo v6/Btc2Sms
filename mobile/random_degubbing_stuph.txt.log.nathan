@@ -12,7 +12,7 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
 [INFO] Scanning for projects...
 [DEBUG] Extension realms for project org.btc4all:btc2sms-parent:pom:0.1.0-SNAPSHOT: (none)
 [DEBUG] Looking up lifecyle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
-[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=2, ConflictMarker.markTime=1, ConflictMarker.nodeCount=250, ConflictIdSorter.graphTime=2, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=83, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=31, ConflictResolver.conflictItemCount=163, DefaultDependencyCollector.collectTime=509, DefaultDependencyCollector.transformTime=38}
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=2, ConflictMarker.markTime=1, ConflictMarker.nodeCount=250, ConflictIdSorter.graphTime=2, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=83, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=33, ConflictResolver.conflictItemCount=163, DefaultDependencyCollector.collectTime=540, DefaultDependencyCollector.transformTime=41}
 [DEBUG] com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.8.0:
 [DEBUG]    com.android.tools:common:jar:22.2.1:compile
 [DEBUG]       com.google.guava:guava:jar:13.0.1:compile
@@ -327,13 +327,13 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
   <escapeString>${maven.resources.escapeString}</escapeString>
   <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
   <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
-  <outputDirectory>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res</outputDirectory>
+  <outputDirectory>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res</outputDirectory>
   <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
   <project default-value="${project}"/>
   <resources>
     <resource>
-      <directory>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/templates/res</directory>
-      <targetPath>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res</targetPath>
+      <directory>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/templates/res</directory>
+      <targetPath>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res</targetPath>
       <filtering>true</filtering>
     </resource>
   </resources>
@@ -909,7 +909,7 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
     <argument>SHA1</argument>${jarsigner.arguments}</arguments>
   <attachments>${jarsigner.attachments}</attachments>
   <includes>
-    <include>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/btc2sms.apk</include>
+    <include>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.apk</include>
   </includes>
   <keypass>37keys on the ring</keypass>
   <keystore>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile</keystore>
@@ -942,7 +942,7 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
   <attachments>${jarsigner.attachments}</attachments>
   <certs default-value="false">${jarsigner.certs}</certs>
   <includes>
-    <include>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/btc2sms.apk</include>
+    <include>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.apk</include>
   </includes>
   <maxMemory>${jarsigner.maxMemory}</maxMemory>
   <processAttachedArtifacts default-value="true">${jarsigner.processAttachedArtifacts}</processAttachedArtifacts>
@@ -996,8 +996,8 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
   <zipalign>
     <skip>false</skip>
     <verbose>true</verbose>
-    <inputApk>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/btc2sms.apk</inputApk>
-    <outputApk>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk</outputApk>
+    <inputApk>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.apk</inputApk>
+    <outputApk>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk</outputApk>
   </zipalign>
   <zipalignInputApk>${android.zipalign.inputApk}</zipalignInputApk>
   <zipalignOutputApk>${android.zipalign.outputApk}</zipalignOutputApk>
@@ -1011,12 +1011,12 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
 <configuration>
   <artifacts>
     <artifact>
-      <file>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk</file>
+      <file>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk</file>
       <type>apk</type>
       <classifier>signed-aligned</classifier>
     </artifact>
     <artifact>
-      <file>/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt</file>
+      <file>/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt</file>
       <type>map</type>
       <classifier>release</classifier>
     </artifact>
@@ -1165,7 +1165,7 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
   <project default-value="${project}"/>
 </configuration>
 [DEBUG] =======================================================================
-[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=21, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=13, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2, ConflictResolver.conflictItemCount=17, DefaultDependencyCollector.collectTime=47, DefaultDependencyCollector.transformTime=2}
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=21, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=13, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1, ConflictResolver.conflictItemCount=17, DefaultDependencyCollector.collectTime=50, DefaultDependencyCollector.transformTime=2}
 [DEBUG] org.btc4all:btc2sms:apk:0.1.0-SNAPSHOT
 [DEBUG]    com.google.android:android:jar:4.1.1.4:provided
 [DEBUG]       commons-logging:commons-logging:jar:1.1.1:compile
@@ -1182,7 +1182,7 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
 [DEBUG]    com.rabbitmq:amqp-client:jar:3.2.3:compile
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ btc2sms ---
-[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=3, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=3, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=0, ConflictResolver.conflictItemCount=3, DefaultDependencyCollector.collectTime=4, DefaultDependencyCollector.transformTime=0}
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=3, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=3, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=0, ConflictResolver.conflictItemCount=3, DefaultDependencyCollector.collectTime=3, DefaultDependencyCollector.transformTime=0}
 [DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.5:
 [DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
 [DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
@@ -1195,173 +1195,173 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
 [DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
 [DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.5:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.5, parent: sun.misc.Launcher$AppClassLoader@7d487b8b]
 [DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.5:clean' with basic configurator -->
-[DEBUG]   (f) directory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target
+[DEBUG]   (f) directory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target
 [DEBUG]   (f) excludeDefaultDirectories = false
 [DEBUG]   (f) failOnError = true
 [DEBUG]   (f) followSymLinks = false
-[DEBUG]   (f) outputDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
-[DEBUG]   (f) reportDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/site
+[DEBUG]   (f) outputDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
+[DEBUG]   (f) reportDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/site
 [DEBUG]   (f) retryOnError = true
 [DEBUG]   (f) skip = false
-[DEBUG]   (f) testOutputDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/test-classes
+[DEBUG]   (f) testOutputDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/test-classes
 [DEBUG] -- end configuration --
-[INFO] Deleting /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile/default-compile
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/maven-status
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/CallListener.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$layout.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSmsInbox.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSentSms.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$2$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/config/AppConfig.class
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/config
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Help$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$1$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$3.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$4.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSmsInbox$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingMmsInbox.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$6.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$3.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Prefs$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$1$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder$2$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$6.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingMmsInbox$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/ExpansionPacks.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$3.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$2$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSentSms$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$3.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Prefs.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$TestTask.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$4.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Help$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$DismissDialogListener.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Main.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Help.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$1$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$5.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$5.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$2.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/ExpansionPacks$1.class
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer$ConsumeThread.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/HelloAndroidActivity.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/AmqpConsumerService.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/AmqpHeartbeatService.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/CheckMessagingService.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/EnabledChangedService.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/ForegroundService.class
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$string.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/App$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/App$ConnectivityCheckState.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/XmlUtils.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$id.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$xml.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/MmsPart.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/MessagingUtils.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage$ScheduleInfo.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/BuildConfig.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/PollerTask.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/BaseHttpTask.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/ForwarderTask.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/CheckConnectivityTask.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/HttpTask.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/HttpTask$1.class
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingSms$ScheduleInfo.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/DatabaseHelper.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage$Direction.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Outbox.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Inbox.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Base64Coder.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/JsonUtils.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/QueuedMessage.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$menu.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage$ProcessingState.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage$ProcessingState.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ValidationException.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$style.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMms.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$attr.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingSms.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingMessagePoller.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/DeviceStatusReceiver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingSmsReceiver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/IncomingMessageRetry.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/MessageStatusNotifier.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/StartAmqpConsumer.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/ExpansionPackInstallReceiver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/SmsReceiver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/ReenableWifiReceiver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingMessageRetry.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingMessageTimeout.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/MessageDeliveryNotifier.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/NudgeReceiver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/ConnectivityChangeReceiver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/DequeueOutgoingMessageReceiver.class
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$array.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/MessagingObserver.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$dimen.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingCall.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$drawable.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Outbox$1.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingSms.class
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/App.class
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes/org
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/BuildConfig.java
-[INFO] Deleting file /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/R.java
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources
-[INFO] Deleting directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target
-[DEBUG] Skipping non-existing directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
-[DEBUG] Skipping non-existing directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/test-classes
-[DEBUG] Skipping non-existing directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/site
+[INFO] Deleting /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile/default-compile
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin/compile
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/maven-status/maven-compiler-plugin
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/maven-status
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/CallListener.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$layout.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSmsInbox.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSentSms.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$2$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/config/AppConfig.class
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/config
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Help$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$1$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$3.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$4.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSmsInbox$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingMmsInbox.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$6.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$3.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Prefs$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$1$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder$2$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$6.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingMmsInbox$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/ExpansionPacks.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$3.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$2$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingSentSms$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$3.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Prefs.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$TestTask.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$4.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Help$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$DismissDialogListener.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Main.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/Help.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$1$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/PendingMessages$5.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$1AndroidJS$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$5.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/LogView.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/MessagingForwarder.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/TestPhoneNumbers$2.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui/ExpansionPacks$1.class
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ui
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer$ConsumeThread.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/HelloAndroidActivity.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/AmqpConsumerService.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/AmqpHeartbeatService.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/CheckMessagingService.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/EnabledChangedService.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service/ForegroundService.class
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/service
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$string.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/App$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/App$ConnectivityCheckState.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/XmlUtils.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$id.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$xml.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/MmsPart.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/MessagingUtils.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage$ScheduleInfo.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/BuildConfig.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/PollerTask.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/BaseHttpTask.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/ForwarderTask.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/CheckConnectivityTask.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/HttpTask.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task/HttpTask$1.class
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/task
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingSms$ScheduleInfo.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/DatabaseHelper.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage$Direction.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Outbox.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Inbox.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Base64Coder.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/JsonUtils.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/QueuedMessage.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$menu.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingMessage$ProcessingState.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMessage$ProcessingState.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/ValidationException.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$style.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingMms.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$attr.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/OutgoingSms.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingMessagePoller.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/DeviceStatusReceiver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingSmsReceiver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/IncomingMessageRetry.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/MessageStatusNotifier.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/StartAmqpConsumer.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/ExpansionPackInstallReceiver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/SmsReceiver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/ReenableWifiReceiver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingMessageRetry.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/OutgoingMessageTimeout.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/MessageDeliveryNotifier.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/NudgeReceiver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/ConnectivityChangeReceiver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver/DequeueOutgoingMessageReceiver.class
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/receiver
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$array.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/MessagingObserver.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$dimen.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingCall.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/R$drawable.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/Outbox$1.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/IncomingSms.class
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms/App.class
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all/btc2sms
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org/btc4all
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes/org
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/BuildConfig.java
+[INFO] Deleting file /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/R.java
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources
+[INFO] Deleting directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target
+[DEBUG] Skipping non-existing directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
+[DEBUG] Skipping non-existing directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/test-classes
+[DEBUG] Skipping non-existing directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/site
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:copy-resources (default) @ btc2sms ---
-[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=1, ConflictMarker.nodeCount=77, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=26, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2, ConflictResolver.conflictItemCount=74, DefaultDependencyCollector.collectTime=28, DefaultDependencyCollector.transformTime=3}
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=1, ConflictMarker.nodeCount=77, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=26, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2, ConflictResolver.conflictItemCount=74, DefaultDependencyCollector.collectTime=29, DefaultDependencyCollector.transformTime=3}
 [DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.6:
 [DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
 [DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
@@ -1424,30 +1424,30 @@ OS name: "linux", version: "3.13.0-29-generic", arch: "amd64", family: "unix"
 [DEBUG]   (f) encoding = UTF-8
 [DEBUG]   (f) escapeWindowsPaths = true
 [DEBUG]   (s) includeEmptyDirs = false
-[DEBUG]   (s) outputDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res
+[DEBUG]   (s) outputDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res
 [DEBUG]   (s) overwrite = false
-[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/pom.xml
-[DEBUG]   (s) directory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/templates/res
-[DEBUG]   (s) targetPath = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res
+[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/pom.xml
+[DEBUG]   (s) directory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/templates/res
+[DEBUG]   (s) targetPath = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res
 [DEBUG]   (s) filtering = true
-[DEBUG]   (s) resources = [Resource {targetPath: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res, filtering: true, FileSet {directory: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/templates/res, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (s) resources = [Resource {targetPath: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res, filtering: true, FileSet {directory: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/templates/res, PatternSet [includes: {}, excludes: {}]}}]
 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@5574c789
 [DEBUG]   (f) supportMultiLineFiltering = false
 [DEBUG]   (f) useBuildFilters = true
 [DEBUG]   (s) useDefaultDelimiters = true
 [DEBUG] -- end configuration --
-[DEBUG] properties used {java.vendor=Oracle Corporation, env.LESSOPEN=| /usr/bin/lesspipe %s, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Linux, sun.boot.class.path=/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-7-oracle/jre/classes, env.PWD=/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile, env.LANG=en_US.UTF-8, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_60-b19, env.XDG_VTNR=7, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0, user.name=nbas, env._=/home/nbas/bin/apache-maven-3.2.1/bin/mvn, maven.build.version=Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-14T09:37:52-08:00), env.USER=nbas, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/home/nbas/local/bin:/home/nbas/local/bin:/home/nbas/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-7-oracle/bin:/usr/lib/jvm/java-7-oracle/db/bin:/usr/lib/jvm/java-7-oracle/jre/bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=en, env.XDG_SESSION_DESKTOP=ubuntu, sun.boot.library.path=/usr/lib/jvm/java-7-oracle/jre/lib/amd64, classworlds.conf=/home/nbas/bin/apache-maven-3.2.1/bin/m2.conf, android.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk, java.version=1.7.0_60, user.timezone=America/Los_Angeles, sun.arch.data.model=64, java.endorsed.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/endorsed, env.DERBY_HOME=/usr/lib/jvm/java-7-oracle/db, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=3, file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=51.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=US, env.GNOME_KEYRING_PID=2118, java.home=/usr/lib/jvm/java-7-oracle/jre, java.vm.info=mixed mode, env.LOGNAME=nbas, os.version=3.13.0-29-generic, env.J2REDIR=/usr/lib/jvm/java-7-oracle/jre, path.separator=:, java.vm.version=24.60-b09, env.QT_QPA_PLATFORMTHEME=appmenu-qt5, env.JAVA_HOME=/usr/lib/jvm/java-7-oracle, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, user.home=/home/nbas, env.OLDPWD=/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile, java.specification.vendor=Oracle Corporation, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS=-e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, env.XDG_SEAT=seat0, java.vm.vendor=Oracle Corporation, maven.home=/home/nbas/bin/apache-maven-3.2.1, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, java.class.path=/home/nbas/bin/apache-maven-3.2.1/boot/plexus-classworlds-2.5.1.jar, env.XDG_SESSION_ID=c2, platform.version=4.1.1.4, maven.version=3.2.1, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/home/nbas, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, java.io.tmpdir=/tmp, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, android.plugin.version=3.8.0, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.ext.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/ext:/usr/java/packages/lib/ext, env.XDG_RUNTIME_DIR=/run/user/1000, env.XAUTHORITY=/var/run/gdm/auth-for-nbas-Th8Rj7/database, user.dir=/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile, env.J2SDKDIR=/usr/lib/jvm/java-7-oracle, line.separator=
+[DEBUG] properties used {java.vendor=Oracle Corporation, env.LESSOPEN=| /usr/bin/lesspipe %s, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Linux, sun.boot.class.path=/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-7-oracle/jre/classes, env.PWD=/home/nbas/bin/37coins/v6/Btc2Sms/mobile, env.LANG=en_US.UTF-8, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_60-b19, env.XDG_VTNR=7, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0, user.name=nbas, env._=/home/nbas/bin/apache-maven-3.2.1/bin/mvn, maven.build.version=Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-14T09:37:52-08:00), env.USER=nbas, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/home/nbas/local/bin:/home/nbas/local/bin:/home/nbas/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-7-oracle/bin:/usr/lib/jvm/java-7-oracle/db/bin:/usr/lib/jvm/java-7-oracle/jre/bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=en, env.XDG_SESSION_DESKTOP=ubuntu, sun.boot.library.path=/usr/lib/jvm/java-7-oracle/jre/lib/amd64, classworlds.conf=/home/nbas/bin/apache-maven-3.2.1/bin/m2.conf, android.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk, java.version=1.7.0_60, user.timezone=America/Los_Angeles, sun.arch.data.model=64, java.endorsed.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/endorsed, env.DERBY_HOME=/usr/lib/jvm/java-7-oracle/db, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=3, file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=51.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=US, env.GNOME_KEYRING_PID=2118, java.home=/usr/lib/jvm/java-7-oracle/jre, java.vm.info=mixed mode, env.LOGNAME=nbas, os.version=3.13.0-29-generic, env.J2REDIR=/usr/lib/jvm/java-7-oracle/jre, path.separator=:, java.vm.version=24.60-b09, env.QT_QPA_PLATFORMTHEME=appmenu-qt5, env.JAVA_HOME=/usr/lib/jvm/java-7-oracle, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, user.home=/home/nbas, env.OLDPWD=/home/nbas/bin/37coins/v6/Btc2Sms/mobile, java.specification.vendor=Oracle Corporation, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS=-e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, env.XDG_SEAT=seat0, java.vm.vendor=Oracle Corporation, maven.home=/home/nbas/bin/apache-maven-3.2.1, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, java.class.path=/home/nbas/bin/apache-maven-3.2.1/boot/plexus-classworlds-2.5.1.jar, env.XDG_SESSION_ID=c2, platform.version=4.1.1.4, maven.version=3.2.1, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/home/nbas, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, java.io.tmpdir=/tmp, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, android.plugin.version=3.8.0, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.ext.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/ext:/usr/java/packages/lib/ext, env.XDG_RUNTIME_DIR=/run/user/1000, env.XAUTHORITY=/var/run/gdm/auth-for-nbas-Th8Rj7/database, user.dir=/home/nbas/bin/37coins/v6/Btc2Sms/mobile, env.J2SDKDIR=/usr/lib/jvm/java-7-oracle, line.separator=
 , java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.USERNAME=nbas, file.encoding=UTF-8, java.specification.version=1.7, env.GNOME_KEYRING_CONTROL=/run/user/1000/keyring-kz8UDu, env.LESSCLOSE=/usr/bin/lesspipe %s %s}
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[DEBUG] resource with targetPath /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res
-directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/templates/res
+[DEBUG] resource with targetPath /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res
+directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/templates/res
 excludes []
 includes []
-[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/templates/res
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/templates/res
 [DEBUG] no use filter components
 [INFO] 
 [INFO] --- android-maven-plugin:3.8.0:generate-sources (default-generate-sources) @ btc2sms ---
-[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=250, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=83, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=10, ConflictResolver.conflictItemCount=163, DefaultDependencyCollector.collectTime=38, DefaultDependencyCollector.transformTime=12}
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=2, ConflictMarker.markTime=1, ConflictMarker.nodeCount=250, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=1, ConflictIdSorter.conflictIdCount=83, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=13, ConflictResolver.conflictItemCount=163, DefaultDependencyCollector.collectTime=39, DefaultDependencyCollector.transformTime=17}
 [DEBUG] com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.8.0:
 [DEBUG]    com.android.tools:common:jar:22.2.1:compile
 [DEBUG]       com.google.guava:guava:jar:13.0.1:compile
@@ -1595,45 +1595,45 @@ includes []
 [DEBUG] Configuring mojo com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:generate-sources from plugin realm ClassRealm[plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0, parent: sun.misc.Launcher$AppClassLoader@7d487b8b]
 [DEBUG] Configuring mojo 'com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:generate-sources' with basic configurator -->
 [DEBUG]   (f) aaptExtraArgs = []
-[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
-[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/assets
+[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/assets
 [DEBUG]   (f) attachJar = true
 [DEBUG]   (f) attachSources = false
 [DEBUG]   (f) buildConfigConstants = []
-[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
-[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
-[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
-[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
-[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
-[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
-[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
-[DEBUG]   (f) genDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r
-[DEBUG]   (f) genDirectoryAidl = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl
+[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
+[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
+[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
+[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
+[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
+[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
+[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
+[DEBUG]   (f) genDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r
+[DEBUG]   (f) genDirectoryAidl = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl
 [DEBUG]   (f) generateApk = true
 [DEBUG]   (f) mergeManifests = false
-[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/libs
-[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/pom.xml
+[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/libs
+[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/pom.xml
 [DEBUG]   (f) projectRepos = [central (http://repo.maven.apache.org/maven2, releases)]
 [DEBUG]   (f) release = true
-[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@2bbddda
-[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res
-[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res-overlay
+[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@7be2149c
+[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res
+[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res-overlay
 [DEBUG]   (f) platform = 17
 [DEBUG]   (f) path = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
-[DEBUG]   (f) sdk = com.jayway.maven.plugins.android.configuration.Sdk@37b74d4e
+[DEBUG]   (f) sdk = com.jayway.maven.plugins.android.configuration.Sdk@63345875
 [DEBUG]   (f) sdkPath = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@5574c789
-[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java
+[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java
 [DEBUG]   (f) undeployBeforeDeploy = true
-[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
+[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
 [DEBUG] -- end configuration --
 [INFO] ANDROID-904-002: Found aidl files: Count = 0
 [INFO] ANDROID-904-002: Found aidl files: Count = 0
 [DEBUG] mergeManifests: false
 [INFO] Manifest merging disabled. Using project manifest only
 [DEBUG] Generating R file for apk
-[INFO] /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt [package, -m, -J, /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r, -M, /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml, -S, /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res, --auto-add-overlay, -I, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar]
-[DEBUG] ANDROID-040-000: Executed command: Commandline = /bin/sh -c cd /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms && /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt package -m -J /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r -M /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml -S /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res --auto-add-overlay -I /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar, Result = 0
+[INFO] /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt [package, -m, -J, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r, -M, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml, -S, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res, --auto-add-overlay, -I, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar]
+[DEBUG] ANDROID-040-000: Executed command: Commandline = /bin/sh -c cd /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms && /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt package -m -J /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r -M /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml -S /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res --auto-add-overlay -I /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar, Result = 0
 [DEBUG] Generating R file for projects dependent on apklibs
 [DEBUG] Generating R file for projects dependent on aar's
 [DEBUG] Generating BuildConfig file
@@ -1645,70 +1645,70 @@ includes []
 [DEBUG]   (f) encoding = UTF-8
 [DEBUG]   (f) escapeWindowsPaths = true
 [DEBUG]   (s) includeEmptyDirs = false
-[DEBUG]   (s) outputDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
+[DEBUG]   (s) outputDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
 [DEBUG]   (s) overwrite = false
-[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/pom.xml
-[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/resources, PatternSet [includes: {}, excludes: {}]}}, Resource {targetPath: null, filtering: false, FileSet {directory: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/resources, PatternSet [includes: {}, excludes: {}]}}, Resource {targetPath: null, filtering: false, FileSet {directory: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@5574c789
 [DEBUG]   (f) supportMultiLineFiltering = false
 [DEBUG]   (f) useBuildFilters = true
 [DEBUG]   (s) useDefaultDelimiters = true
 [DEBUG] -- end configuration --
-[DEBUG] properties used {java.vendor=Oracle Corporation, env.LESSOPEN=| /usr/bin/lesspipe %s, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Linux, sun.boot.class.path=/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-7-oracle/jre/classes, env.PWD=/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile, env.LANG=en_US.UTF-8, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_60-b19, env.XDG_VTNR=7, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0, user.name=nbas, env._=/home/nbas/bin/apache-maven-3.2.1/bin/mvn, maven.build.version=Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-14T09:37:52-08:00), env.USER=nbas, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/home/nbas/local/bin:/home/nbas/local/bin:/home/nbas/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-7-oracle/bin:/usr/lib/jvm/java-7-oracle/db/bin:/usr/lib/jvm/java-7-oracle/jre/bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=en, env.XDG_SESSION_DESKTOP=ubuntu, sun.boot.library.path=/usr/lib/jvm/java-7-oracle/jre/lib/amd64, classworlds.conf=/home/nbas/bin/apache-maven-3.2.1/bin/m2.conf, android.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk, java.version=1.7.0_60, user.timezone=America/Los_Angeles, sun.arch.data.model=64, java.endorsed.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/endorsed, env.DERBY_HOME=/usr/lib/jvm/java-7-oracle/db, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=3, file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=51.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=US, env.GNOME_KEYRING_PID=2118, java.home=/usr/lib/jvm/java-7-oracle/jre, java.vm.info=mixed mode, env.LOGNAME=nbas, os.version=3.13.0-29-generic, env.J2REDIR=/usr/lib/jvm/java-7-oracle/jre, path.separator=:, java.vm.version=24.60-b09, env.QT_QPA_PLATFORMTHEME=appmenu-qt5, env.JAVA_HOME=/usr/lib/jvm/java-7-oracle, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, user.home=/home/nbas, env.OLDPWD=/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile, java.specification.vendor=Oracle Corporation, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS=-e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, env.XDG_SEAT=seat0, java.vm.vendor=Oracle Corporation, maven.home=/home/nbas/bin/apache-maven-3.2.1, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, java.class.path=/home/nbas/bin/apache-maven-3.2.1/boot/plexus-classworlds-2.5.1.jar, env.XDG_SESSION_ID=c2, platform.version=4.1.1.4, maven.version=3.2.1, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/home/nbas, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, java.io.tmpdir=/tmp, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, android.plugin.version=3.8.0, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.ext.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/ext:/usr/java/packages/lib/ext, env.XDG_RUNTIME_DIR=/run/user/1000, env.XAUTHORITY=/var/run/gdm/auth-for-nbas-Th8Rj7/database, user.dir=/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile, env.J2SDKDIR=/usr/lib/jvm/java-7-oracle, line.separator=
+[DEBUG] properties used {java.vendor=Oracle Corporation, env.LESSOPEN=| /usr/bin/lesspipe %s, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Linux, sun.boot.class.path=/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-7-oracle/jre/classes, env.PWD=/home/nbas/bin/37coins/v6/Btc2Sms/mobile, env.LANG=en_US.UTF-8, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.7.0_60-b19, env.XDG_VTNR=7, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0, user.name=nbas, env._=/home/nbas/bin/apache-maven-3.2.1/bin/mvn, maven.build.version=Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-14T09:37:52-08:00), env.USER=nbas, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/home/nbas/local/bin:/home/nbas/local/bin:/home/nbas/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-7-oracle/bin:/usr/lib/jvm/java-7-oracle/db/bin:/usr/lib/jvm/java-7-oracle/jre/bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=en, env.XDG_SESSION_DESKTOP=ubuntu, sun.boot.library.path=/usr/lib/jvm/java-7-oracle/jre/lib/amd64, classworlds.conf=/home/nbas/bin/apache-maven-3.2.1/bin/m2.conf, android.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk, java.version=1.7.0_60, user.timezone=America/Los_Angeles, sun.arch.data.model=64, java.endorsed.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/endorsed, env.DERBY_HOME=/usr/lib/jvm/java-7-oracle/db, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=3, file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=51.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=US, env.GNOME_KEYRING_PID=2118, java.home=/usr/lib/jvm/java-7-oracle/jre, java.vm.info=mixed mode, env.LOGNAME=nbas, os.version=3.13.0-29-generic, env.J2REDIR=/usr/lib/jvm/java-7-oracle/jre, path.separator=:, java.vm.version=24.60-b09, env.QT_QPA_PLATFORMTHEME=appmenu-qt5, env.JAVA_HOME=/usr/lib/jvm/java-7-oracle, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, user.home=/home/nbas, env.OLDPWD=/home/nbas/bin/37coins/v6/Btc2Sms/mobile, java.specification.vendor=Oracle Corporation, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS=-e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, env.XDG_SEAT=seat0, java.vm.vendor=Oracle Corporation, maven.home=/home/nbas/bin/apache-maven-3.2.1, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -e clean install -Dandroid.sdk.path=/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk -P release -X -rf :btc2sms, java.class.path=/home/nbas/bin/apache-maven-3.2.1/boot/plexus-classworlds-2.5.1.jar, env.XDG_SESSION_ID=c2, platform.version=4.1.1.4, maven.version=3.2.1, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.7, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/home/nbas, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, java.io.tmpdir=/tmp, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, android.plugin.version=3.8.0, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.ext.dirs=/usr/lib/jvm/java-7-oracle/jre/lib/ext:/usr/java/packages/lib/ext, env.XDG_RUNTIME_DIR=/run/user/1000, env.XAUTHORITY=/var/run/gdm/auth-for-nbas-Th8Rj7/database, user.dir=/home/nbas/bin/37coins/v6/Btc2Sms/mobile, env.J2SDKDIR=/usr/lib/jvm/java-7-oracle, line.separator=
 , java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.USERNAME=nbas, file.encoding=UTF-8, java.specification.version=1.7, env.GNOME_KEYRING_CONTROL=/run/user/1000/keyring-kz8UDu, env.LESSCLOSE=/usr/bin/lesspipe %s %s}
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [DEBUG] resource with targetPath null
-directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/resources
+directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/resources
 excludes []
 includes []
-[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/resources
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/resources
 [DEBUG] resource with targetPath null
-directory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
+directory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
 excludes []
 includes []
-[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
 [DEBUG] no use filter components
 [INFO] 
 [INFO] --- android-maven-plugin:3.8.0:manifest-update (manifestUpdate) @ btc2sms ---
 [DEBUG] Configuring mojo com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:manifest-update from plugin realm ClassRealm[plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0, parent: sun.misc.Launcher$AppClassLoader@7d487b8b]
 [DEBUG] Configuring mojo 'com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:manifest-update' with basic configurator -->
 [DEBUG]   (f) aaptExtraArgs = []
-[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
-[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/assets
+[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/assets
 [DEBUG]   (f) attachJar = true
 [DEBUG]   (f) attachSources = false
-[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
-[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
-[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
-[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
-[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
-[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
-[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
+[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
+[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
+[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
+[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
+[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
+[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
+[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
 [DEBUG]   (f) generateApk = true
 [DEBUG]   (f) debuggable = false
 [DEBUG]   (f) versionCodeAutoIncrement = true
-[DEBUG]   (f) manifest = com.jayway.maven.plugins.android.configuration.Manifest@339c5393
+[DEBUG]   (f) manifest = com.jayway.maven.plugins.android.configuration.Manifest@55a8a7bc
 [DEBUG]   (f) manifestProviderAuthorities = {}
 [DEBUG]   (f) manifestVersionCodeAutoIncrement = false
 [DEBUG]   (f) manifestVersionCodeUpdateFromVersion = false
 [DEBUG]   (f) manifestVersionName = 0.1.0-SNAPSHOT
-[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/libs
-[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/pom.xml
+[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/libs
+[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/pom.xml
 [DEBUG]   (f) projectRepos = [central (http://repo.maven.apache.org/maven2, releases)]
 [DEBUG]   (f) release = true
-[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@2bbddda
-[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res
-[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res-overlay
+[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@7be2149c
+[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res
+[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res-overlay
 [DEBUG]   (f) platform = 17
 [DEBUG]   (f) path = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
-[DEBUG]   (f) sdk = com.jayway.maven.plugins.android.configuration.Sdk@14c5e6f5
+[DEBUG]   (f) sdk = com.jayway.maven.plugins.android.configuration.Sdk@5c32f25d
 [DEBUG]   (f) sdkPath = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@5574c789
-[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java
+[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java
 [DEBUG]   (f) undeployBeforeDeploy = true
-[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
+[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
 [DEBUG] -- end configuration --
-[INFO] Attempting to update manifest /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[INFO] Attempting to update manifest /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
 [DEBUG]     usesSdk=null
 [DEBUG]     versionName=0.1.0-SNAPSHOT
 [DEBUG]     versionCode=null
@@ -1723,43 +1723,43 @@ includes []
 [DEBUG]     supports-screens: not set
 [DEBUG]     compatible-screens: not set
 [INFO] Testing if node application is application
-[INFO] Made changes to manifest file, updating /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[INFO] Made changes to manifest file, updating /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
 [INFO] 
 [INFO] --- android-maven-plugin:3.8.0:consume-aar (default-consume-aar) @ btc2sms ---
 [DEBUG] Configuring mojo com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:consume-aar from plugin realm ClassRealm[plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0, parent: sun.misc.Launcher$AppClassLoader@7d487b8b]
 [DEBUG] Configuring mojo 'com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:consume-aar' with basic configurator -->
 [DEBUG]   (f) aaptExtraArgs = []
-[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
-[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/assets
+[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/assets
 [DEBUG]   (f) attachJar = true
 [DEBUG]   (f) attachSources = false
-[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
-[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
-[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
-[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
-[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
-[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
-[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
+[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
+[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
+[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
+[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
+[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
+[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
+[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
 [DEBUG]   (f) generateApk = true
-[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/libs
-[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/pom.xml
+[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/libs
+[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/pom.xml
 [DEBUG]   (f) projectRepos = [central (http://repo.maven.apache.org/maven2, releases)]
 [DEBUG]   (f) release = true
-[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@2bbddda
-[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res
-[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res-overlay
+[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@7be2149c
+[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res
+[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res-overlay
 [DEBUG]   (f) platform = 17
 [DEBUG]   (f) path = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
-[DEBUG]   (f) sdk = com.jayway.maven.plugins.android.configuration.Sdk@14791da5
+[DEBUG]   (f) sdk = com.jayway.maven.plugins.android.configuration.Sdk@7d925e7b
 [DEBUG]   (f) sdkPath = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@5574c789
-[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java
+[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java
 [DEBUG]   (f) undeployBeforeDeploy = true
-[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
+[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
 [DEBUG] -- end configuration --
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ btc2sms ---
-[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=1, ConflictMarker.nodeCount=160, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=43, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1, ConflictResolver.conflictItemCount=63, DefaultDependencyCollector.collectTime=135, DefaultDependencyCollector.transformTime=2}
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=160, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=43, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1, ConflictResolver.conflictItemCount=63, DefaultDependencyCollector.collectTime=142, DefaultDependencyCollector.transformTime=3}
 [DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.1:
 [DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
 [DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
@@ -1828,20 +1828,20 @@ includes []
 [DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.2.2
 [DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.1:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1, parent: sun.misc.Launcher$AppClassLoader@7d487b8b]
 [DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.1:compile' with basic configurator -->
-[DEBUG]   (f) basedir = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms
-[DEBUG]   (f) buildDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target
-[DEBUG]   (f) classpathElements = [/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes, /home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar, /home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar, /home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar, /home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar, /home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar, /home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar, /home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar, /home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar, /home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar, /home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar, /home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar, /home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar, /home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar]
-[DEBUG]   (f) compileSourceRoots = [/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java, /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java, /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r, /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl]
+[DEBUG]   (f) basedir = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms
+[DEBUG]   (f) buildDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target
+[DEBUG]   (f) classpathElements = [/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes, /home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar, /home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar, /home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar, /home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar, /home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar, /home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar, /home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar, /home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar, /home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar, /home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar, /home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar, /home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar, /home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar]
+[DEBUG]   (f) compileSourceRoots = [/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl]
 [DEBUG]   (f) compilerId = javac
 [DEBUG]   (f) debug = true
 [DEBUG]   (f) encoding = UTF-8
 [DEBUG]   (f) failOnError = true
 [DEBUG]   (f) forceJavacCompilerUse = false
 [DEBUG]   (f) fork = false
-[DEBUG]   (f) generatedSourcesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/annotations
+[DEBUG]   (f) generatedSourcesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/annotations
 [DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.1:compile {execution: default-compile}
 [DEBUG]   (f) optimize = false
-[DEBUG]   (f) outputDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
+[DEBUG]   (f) outputDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
 [DEBUG]   (f) projectArtifact = org.btc4all:btc2sms:apk:0.1.0-SNAPSHOT
 [DEBUG]   (f) showDeprecation = false
 [DEBUG]   (f) showWarnings = false
@@ -1855,10 +1855,10 @@ includes []
 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@5574c789
 [DEBUG] -- end configuration --
 [DEBUG] Using compiler 'javac'.
-[DEBUG] Source directories: [/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java
- /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r
- /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl]
-[DEBUG] Classpath: [/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
+[DEBUG] Source directories: [/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java
+ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r
+ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl]
+[DEBUG] Classpath: [/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
  /home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar
  /home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
  /home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar
@@ -1872,73 +1872,73 @@ includes []
  /home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar
  /home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar
  /home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar]
-[DEBUG] Output directory: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
+[DEBUG] Output directory: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
 [DEBUG] CompilerReuseStrategy: reuseCreated
 [DEBUG] useIncrementalCompilation enabled
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingMessagePoller.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/CheckConnectivityTask.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingSentSms.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/IncomingMessageRetry.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Help.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Main.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/App.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/AmqpHeartbeatService.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingForwarder.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/MessagingObserver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/DeviceStatusReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/ForwarderTask.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/EnabledChangedService.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/XmlUtils.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/NudgeReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/AmqpConsumerService.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/Inbox.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/BaseHttpTask.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/AmqpConsumer.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/LogView.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/config/AppConfig.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingSmsInbox.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/Base64Coder.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/DatabaseHelper.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/HelloAndroidActivity.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingMmsInbox.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingMessageRetry.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/BuildConfig.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/MessageDeliveryNotifier.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/R.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/OutgoingSms.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Prefs.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/ExpansionPacks.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/StartAmqpConsumer.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ValidationException.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/PendingMessages.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/QueuedMessage.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/ReenableWifiReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/MessagingUtils.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/CheckMessagingService.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/ConnectivityChangeReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingSmsReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/ForegroundService.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/CallListener.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/OutgoingMessage.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/DequeueOutgoingMessageReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/JsonUtils.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingSms.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/MessageStatusNotifier.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/ExpansionPackInstallReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/TestPhoneNumbers.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingCall.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingMessage.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingMessageTimeout.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/PollerTask.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/Outbox.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/SmsReceiver.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/MmsPart.java
-[DEBUG] Stale source detected: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingMms.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/AmqpConsumer.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Help.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/R.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingMms.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/SmsReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/Base64Coder.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/ExpansionPackInstallReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/LogView.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/OutgoingMessage.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/EnabledChangedService.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/DequeueOutgoingMessageReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingSmsInbox.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingMessagePoller.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/AmqpHeartbeatService.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r/org/btc4all/btc2sms/BuildConfig.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/config/AppConfig.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Prefs.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingMmsInbox.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/HelloAndroidActivity.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ValidationException.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/OutgoingSms.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/DeviceStatusReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/ForegroundService.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/PollerTask.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/App.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/StartAmqpConsumer.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/DatabaseHelper.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/MessagingObserver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/MessagingUtils.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/IncomingMessageRetry.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingMessage.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/IgnoredPhoneNumbers.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/CallListener.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingMessageTimeout.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingSms.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/Outbox.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/ConnectivityChangeReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/IncomingCall.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/JsonUtils.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/MessageStatusNotifier.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/AmqpConsumerService.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/MmsPart.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingForwarder.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/CheckConnectivityTask.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/TestPhoneNumbers.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/XmlUtils.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/service/CheckMessagingService.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Main.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/BaseHttpTask.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/Inbox.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/MessagingSentSms.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/ExpansionPacks.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/PendingMessages.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/ReenableWifiReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/NudgeReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/ForwarderTask.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingMessageRetry.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/OutgoingSmsReceiver.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/receiver/MessageDeliveryNotifier.java
+[DEBUG] Stale source detected: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/QueuedMessage.java
 [INFO] Changes detected - recompiling the module!
 [DEBUG] Classpath:
-[DEBUG]  /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
+[DEBUG]  /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
 [DEBUG]  /home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar
 [DEBUG]  /home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
 [DEBUG]  /home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar
@@ -1953,37 +1953,37 @@ includes []
 [DEBUG]  /home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar
 [DEBUG]  /home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar
 [DEBUG] Source roots:
-[DEBUG]  /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java
-[DEBUG]  /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
-[DEBUG]  /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r
-[DEBUG]  /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl
+[DEBUG]  /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java
+[DEBUG]  /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
+[DEBUG]  /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r
+[DEBUG]  /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl
 [DEBUG] Command line options:
-[DEBUG] -d /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes -classpath /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes:/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar:/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar:/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar:/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar:/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar:/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar:/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar:/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar:/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar: -sourcepath /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java:/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/r:/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl: -g -nowarn -target 1.5 -source 1.5 -encoding UTF-8
+[DEBUG] -d /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes -classpath /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes:/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar:/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar:/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar:/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar:/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar:/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar:/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar:/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar:/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar: -sourcepath /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java:/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r:/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/aidl: -g -nowarn -target 1.5 -source 1.5 -encoding UTF-8
 [DEBUG] incrementalBuildHelper#beforeRebuildExecution
-[INFO] Compiling 61 source files to /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes
+[INFO] Compiling 61 source files to /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
 [DEBUG] incrementalBuildHelper#afterRebuildExecution
-[WARNING] /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/JsonUtils.java: Some input files use or override a deprecated API.
-[WARNING] /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/JsonUtils.java: Recompile with -Xlint:deprecation for details.
-[WARNING] /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java: /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java uses unchecked or unsafe operations.
-[WARNING] /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java: Recompile with -Xlint:unchecked for details.
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Main.java: Some input files use or override a deprecated API.
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Main.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java uses unchecked or unsafe operations.
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- android-maven-plugin:3.8.0:proguard (default-proguard) @ btc2sms ---
 [DEBUG] Configuring mojo com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:proguard from plugin realm ClassRealm[plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0, parent: sun.misc.Launcher$AppClassLoader@7d487b8b]
 [DEBUG] Configuring mojo 'com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:proguard' with basic configurator -->
 [DEBUG]   (f) aaptExtraArgs = []
-[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
-[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/assets
+[DEBUG]   (f) androidManifestFile = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[DEBUG]   (f) assetsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/assets
 [DEBUG]   (f) attachJar = true
 [DEBUG]   (f) attachSources = false
-[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
-[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
-[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
-[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
-[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
-[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
-[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
+[DEBUG]   (f) combinedAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-assets/assets
+[DEBUG]   (f) combinedRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/combined-resources/res
+[DEBUG]   (f) extractedDependenciesAssets = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/assets
+[DEBUG]   (f) extractedDependenciesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies
+[DEBUG]   (f) extractedDependenciesJavaResources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
+[DEBUG]   (f) extractedDependenciesJavaSources = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/java
+[DEBUG]   (f) extractedDependenciesRes = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/res
 [DEBUG]   (f) generateApk = true
-[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/libs
+[DEBUG]   (f) nativeLibrariesDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/libs
 [DEBUG]   (f) outputDirectory = proguard
 [DEBUG]   (f) pluginDependencies = [com.jayway.maven.plugins.android.generation2:android-maven-plugin:maven-plugin:3.8.0:, com.android.tools:common:jar:22.2.1:compile, com.google.guava:guava:jar:13.0.1:compile, com.android.tools:dvlib:jar:22.2.1:compile, com.android.tools:sdk-common:jar:22.2.1:compile, com.android.tools:sdklib:jar:22.2.1:compile, org.apache.httpcomponents:httpclient:jar:4.1.1:compile, org.apache.httpcomponents:httpcore:jar:4.1:compile, commons-logging:commons-logging:jar:1.1.1:compile, commons-codec:commons-codec:jar:1.4:compile, org.apache.httpcomponents:httpmime:jar:4.1:compile, org.apache.commons:commons-compress:jar:1.0:compile, com.android.tools.build:builder:jar:0.6.3:compile, com.android.tools.build:builder-model:jar:0.6.3:compile, com.android.tools.build:builder-test-api:jar:0.6.3:compile, org.bouncycastle:bcpkix-jdk15on:jar:1.48:compile, org.bouncycastle:bcprov-jdk15on:jar:1.48:compile, com.android.tools.build:manifest-merger:jar:22.2.1:compile, net.sf.kxml:kxml2:jar:2.3.0:compile, com.android.tools.ddms:ddmlib:jar:22.2.1:compile, com.android.tools.layoutlib:layoutlib-api:jar:22.2.1:compile, com.android.tools.lint:lint:jar:22.2.1:compile, com.android.tools.lint:lint-api:jar:22.2.1:compile, com.android.tools.external.lombok:lombok-ast:jar:0.2.1:compile, org.ow2.asm:asm-tree:jar:4.0:compile, com.android.tools.lint:lint-checks:jar:22.2.1:compile, org.ow2.asm:asm-analysis:jar:4.0:compile, javax.enterprise:cdi-api:jar:1.0:compile, javax.annotation:jsr250-api:jar:1.0:compile, javax.inject:javax.inject:jar:1:compile, org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:compile, aopalliance:aopalliance:jar:1.0:compile, org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M5:compile, org.codehaus.plexus:plexus-interpolation:jar:1.19:compile, org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile, org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile, org.sonatype.plexus:plexus-cipher:jar:1.4:compile, org.apache.maven:maven-archiver:jar:2.5:compile, emma:emma:jar:2.0.5312:compile, org.codehaus.plexus:plexus-archiver:jar:2.3:compile, junit:junit:jar:3.8.1:compile, org.codehaus.plexus:plexus-io:jar:2.0.6:compile, org.codehaus.plexus:plexus-utils:jar:3.0.15:compile, commons-jxpath:commons-jxpath:jar:1.3:compile, commons-io:commons-io:jar:2.4:compile, org.ow2.asm:asm:jar:4.1:compile, commons-lang:commons-lang:jar:2.6:compile, org.eclipse.aether:aether-util:jar:0.9.0.M2:compile, org.eclipse.aether:aether-connector-wagon:jar:0.9.0.M2:compile, com.github.rtyley:android-screenshot-paparazzo:jar:1.9:compile, com.madgag:animated-gif-lib:jar:1.0:compile, com.github.rtyley:android-screenshot-celebrity:jar:1.9:compile]
 [DEBUG]   (f) skip = false
@@ -1991,20 +1991,20 @@ includes []
 [DEBUG]   (f) proguard = com.jayway.maven.plugins.android.configuration.Proguard@342958ce
 [DEBUG]   (f) proguardConfigs = []
 [DEBUG]   (f) proguardJvmArguments = []
-[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/pom.xml
+[DEBUG]   (f) project = MavenProject: org.btc4all:btc2sms:0.1.0-SNAPSHOT @ /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/pom.xml
 [DEBUG]   (f) projectRepos = [central (http://repo.maven.apache.org/maven2, releases)]
 [DEBUG]   (f) release = true
-[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@2bbddda
-[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res
-[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/res-overlay
+[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@7be2149c
+[DEBUG]   (f) resourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res
+[DEBUG]   (f) resourceOverlayDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res-overlay
 [DEBUG]   (f) platform = 17
 [DEBUG]   (f) path = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
 [DEBUG]   (f) sdk = com.jayway.maven.plugins.android.configuration.Sdk@6855723
 [DEBUG]   (f) sdkPath = /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk
 [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@5574c789
-[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/src/main/java
+[DEBUG]   (f) sourceDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java
 [DEBUG]   (f) undeployBeforeDeploy = true
-[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
+[DEBUG]   (f) unpackedApkLibsDirectory = /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/unpack/apklibs
 [DEBUG] -- end configuration --
 [DEBUG] pluginArtifact: /home/nbas/.m2/repository/com/jayway/maven/plugins/android/generation2/android-maven-plugin/3.8.0/android-maven-plugin-3.8.0.jar
 [DEBUG] pluginArtifact: /home/nbas/.m2/repository/com/android/tools/common/22.2.1/common-22.2.1.jar
@@ -2058,10 +2058,10 @@ includes []
 [DEBUG] pluginArtifact: /home/nbas/.m2/repository/com/github/rtyley/android-screenshot-paparazzo/1.9/android-screenshot-paparazzo-1.9.jar
 [DEBUG] pluginArtifact: /home/nbas/.m2/repository/com/madgag/animated-gif-lib/1.0/animated-gif-lib-1.0.jar
 [DEBUG] pluginArtifact: /home/nbas/.m2/repository/com/github/rtyley/android-screenshot-celebrity/1.9/android-screenshot-celebrity-1.9.jar
-[INFO] /usr/lib/jvm/java-7-oracle/jre/bin/java [-Xmx512M, -jar, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar, @proguard.conf, -injars, '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes', -injars, /home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar', -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar', -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar', -libraryjars, /home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**), -libraryjars, '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar', -libraryjars, '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar', -libraryjars, '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar', -libraryjars, '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar', -libraryjars, '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar', -outjars, '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar', -dump, '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt', -printseeds, '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt', -printusage, '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt', -printmapping, '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt']
+[INFO] /usr/lib/jvm/java-7-oracle/jre/bin/java [-Xmx512M, -jar, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar, @proguard.conf, -injars, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes', -injars, /home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar', -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar', -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar', -libraryjars, /home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**), -libraryjars, '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar', -libraryjars, '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar', -libraryjars, '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar', -libraryjars, '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar', -libraryjars, '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar', -outjars, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar', -dump, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt', -printseeds, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt', -printusage, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt', -printmapping, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt']
 [DEBUG] ProGuard, version 4.7
 [DEBUG] Reading input...
-[DEBUG] Reading program directory [/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes]
+[DEBUG] Reading program directory [/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes]
 [DEBUG] Reading program jar [/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar] (filtered)
 [DEBUG] Reading program jar [/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar] (filtered)
 [DEBUG] Reading program jar [/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar] (filtered)
@@ -2270,28 +2270,28 @@ includes []
 [DEBUG] Note: the configuration refers to the unknown class 'com.android.vending.licensing.ILicensingService'
 [DEBUG] Note: there were 1 references to unknown classes.
 [INFO] Warning: there were 1 instances of library classes depending on program classes.
+[DEBUG]       You should check your configuration for typos.
 [INFO]          You must avoid such dependencies, since the program classes will
 [INFO]          be processed, while the library classes will remain unchanged.
 [INFO] java.io.IOException: Please correct the above warnings first.
 [INFO] 	at proguard.Initializer.execute(Initializer.java:321)
-[DEBUG]       You should check your configuration for typos.
 [INFO] 	at proguard.ProGuard.initialize(ProGuard.java:211)
 [INFO] 	at proguard.ProGuard.execute(ProGuard.java:86)
 [INFO] 	at proguard.ProGuard.main(ProGuard.java:492)
-[DEBUG] ANDROID-040-000: Executed command: Commandline = /bin/sh -c cd /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms && /usr/lib/jvm/java-7-oracle/jre/bin/java -Xmx512M -jar /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar @proguard.conf -injars '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes' -injars '/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar' -libraryjars '/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**)' -libraryjars '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar' -libraryjars '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar' -libraryjars '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar' -libraryjars '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar' -libraryjars '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar' -outjars '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar' -dump '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt' -printseeds '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt' -printusage '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt' -printmapping '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt', Result = 1
+[DEBUG] ANDROID-040-000: Executed command: Commandline = /bin/sh -c cd /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms && /usr/lib/jvm/java-7-oracle/jre/bin/java -Xmx512M -jar /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar @proguard.conf -injars '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes' -injars '/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar' -libraryjars '/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**)' -libraryjars '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar' -libraryjars '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar' -libraryjars '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar' -libraryjars '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar' -libraryjars '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar' -outjars '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar' -dump '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt' -printseeds '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt' -printusage '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt' -printmapping '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt', Result = 1
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary:
 [INFO] 
-[INFO] btc2sms - Application ............................. FAILURE [  6.718 s]
+[INFO] btc2sms - Application ............................. FAILURE [  7.213 s]
 [INFO] btc2sms-it - Integration tests .................... SKIPPED
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 7.649 s
-[INFO] Finished at: 2014-06-09T10:55:42-08:00
+[INFO] Total time: 8.187 s
+[INFO] Finished at: 2014-06-09T13:02:39-08:00
 [INFO] Final Memory: 21M/302M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:proguard (default-proguard) on project btc2sms: MojoExecutionException: ANDROID-040-001: Could not execute: Command = /bin/sh -c cd /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms && /usr/lib/jvm/java-7-oracle/jre/bin/java -Xmx512M -jar /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar @proguard.conf -injars '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes' -injars '/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar' -libraryjars '/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**)' -libraryjars '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar' -libraryjars '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar' -libraryjars '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar' -libraryjars '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar' -libraryjars '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar' -outjars '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar' -dump '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt' -printseeds '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt' -printusage '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt' -printmapping '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt', Result = 1 -> [Help 1]
+[ERROR] Failed to execute goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:proguard (default-proguard) on project btc2sms: MojoExecutionException: ANDROID-040-001: Could not execute: Command = /bin/sh -c cd /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms && /usr/lib/jvm/java-7-oracle/jre/bin/java -Xmx512M -jar /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar @proguard.conf -injars '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes' -injars '/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar' -libraryjars '/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**)' -libraryjars '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar' -libraryjars '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar' -libraryjars '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar' -libraryjars '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar' -libraryjars '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar' -outjars '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar' -dump '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt' -printseeds '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt' -printusage '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt' -printmapping '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt', Result = 1 -> [Help 1]
 org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.0:proguard (default-proguard) on project btc2sms: 
 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:216)
 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
@@ -2319,7 +2319,7 @@ Caused by: org.apache.maven.plugin.MojoExecutionException:
 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
 	... 19 more
-Caused by: com.jayway.maven.plugins.android.ExecutionException: ANDROID-040-001: Could not execute: Command = /bin/sh -c cd /home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms && /usr/lib/jvm/java-7-oracle/jre/bin/java -Xmx512M -jar /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar @proguard.conf -injars '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/classes' -injars '/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar' -libraryjars '/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**)' -libraryjars '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar' -libraryjars '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar' -libraryjars '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar' -libraryjars '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar' -libraryjars '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar' -outjars '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar' -dump '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt' -printseeds '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt' -printusage '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt' -printmapping '/home/nbas/bin/37coins/Btc4All/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt', Result = 1
+Caused by: com.jayway.maven.plugins.android.ExecutionException: ANDROID-040-001: Could not execute: Command = /bin/sh -c cd /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms && /usr/lib/jvm/java-7-oracle/jre/bin/java -Xmx512M -jar /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar @proguard.conf -injars '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes' -injars '/home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -injars '/home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF)' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar' -libraryjars '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar' -libraryjars '/home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**)' -libraryjars '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar' -libraryjars '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar' -libraryjars '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar' -libraryjars '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar' -libraryjars '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar' -outjars '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar' -dump '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt' -printseeds '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt' -printusage '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt' -printmapping '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt', Result = 1
 	at com.jayway.maven.plugins.android.CommandExecutor$Factory$DefaultCommandExecutor.executeCommand(CommandExecutor.java:246)
 	at com.jayway.maven.plugins.android.phase04processclasses.ProguardMojo.executeProguard(ProguardMojo.java:352)
 	... 22 more

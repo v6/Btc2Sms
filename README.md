@@ -10,6 +10,15 @@ EnvayaSMS architecture was a central control server. The objective is to get rid
 
 set `<sdk><path>` in `mobile/pom.xml`, then build with `mvn clean install`
 
+`<sdk><path>` in `mobile/pom.xml` should refer to an element in your `settings.xml` file. 
+
+There are two locations where a settings.xml file may live:
+
+    The Maven install: $M2_HOME/conf/settings.xml
+    A user's install: ${user.home}/.m2/settings.xml
+
+See http://maven.apache.org/settings.html for further details on setting up your settings.xml file. 
+
 ## Tip4Commit
 
 [![tip for next commit](http://tip4commit.com/projects/530.svg)](http://tip4commit.com/projects/530)

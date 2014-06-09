@@ -60,7 +60,7 @@
 					<configuration>
 						<sdk>
 							<platform>17</platform> <!-- 20140609 - Nathan Basanese - I should note that the only "Android Virtual Devices" I ran on the android emulator were for platform 13. -->
-							<path>/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk</path>
+							<path>/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk</path> <!-- Yes, I was a good boy and created a settings file. Impatience... -->
 						</sdk>
 												<zipalign>
 							<verbose>true</verbose>
