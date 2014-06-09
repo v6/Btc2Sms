@@ -1,6 +1,9 @@
 package org.btc4all.gateway;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.util.Arrays;
+import java.util.Calendar;
 
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
@@ -18,10 +21,22 @@ import org.btc4all.gateway.resources.WalletResource;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.bitcoin.core.AbstractWalletEventListener;
+import com.google.bitcoin.core.BlockChain;
+import com.google.bitcoin.core.Coin;
+import com.google.bitcoin.core.NetworkParameters;
+import com.google.bitcoin.core.PeerGroup;
 import com.google.bitcoin.core.Sha256Hash;
+import com.google.bitcoin.core.Transaction;
+import com.google.bitcoin.core.Wallet;
 import com.google.bitcoin.crypto.MnemonicCode;
+import com.google.bitcoin.params.TestNet3Params;
+import com.google.bitcoin.store.BlockStore;
+import com.google.bitcoin.store.BlockStoreException;
+import com.google.bitcoin.store.MemoryBlockStore;
 import com.google.bitcoin.wallet.DeterministicKeyChain;
 import com.google.bitcoin.wallet.DeterministicSeed;
+import com.google.bitcoin.wallet.KeyChain.KeyPurpose;
 import com.google.bitcoin.wallet.KeyChainGroup;
 
 public class WalletClient {
@@ -29,6 +44,7 @@ public class WalletClient {
     private static int LOOKAHEAD_SIZE = 10;
     private HttpClient httpClient;
     private String url;
+    
     
     public static boolean isSucceed(HttpResponse response) {
         return response.getStatusLine().getStatusCode() >= 200 && response.getStatusLine().getStatusCode() < 300;
@@ -52,22 +68,52 @@ public class WalletClient {
     /**
      * @param args
      * @throws IOException 
+     * @throws BlockStoreException 
      */
-    public static void main(String[] args) throws IOException {
-        
+    public static void main(String[] args) throws IOException, BlockStoreException {
+        BlockChain chain = null;
+        NetworkParameters params = TestNet3Params.get();
+        //set up keychaingroup
         DeterministicSeed seed = new DeterministicSeed(SEED, MnemonicCode.BIP39_STANDARDISATION_TIME_SECS);
         KeyChainGroup kcg = new KeyChainGroup(seed);
         kcg.setLookaheadSize(LOOKAHEAD_SIZE);
         DeterministicKeyChain kc = kcg.getActiveKeyChain();
-        String xpub = kc.getWatchingKey().serializePubB58();
+        String xpub1 = kc.getWatchingKey().serializePubB58();
         
+        //get second half of wallet
+        WalletClient wc = new WalletClient("http://127.0.0.1:8080" + WalletResource.PATH);
+        WalletRequest wr = wc.create(xpub1);
+        String xpub2 = wr.getXpub();
+        System.out.println(kc.getWatchingKey().toString());
+        kcg.addShadow(kc.getWatchingKey().getPath(), Arrays.asList(xpub2));
         
-        WalletClient wc = new WalletClient("http://127.0.0.1:8037" + WalletResource.PATH);
-        WalletRequest wr = wc.create(xpub);
-        System.out.println(wr.getAccountId());
-        System.out.println(wr.getXpub());
+        //get wallet and peergroup going
+        Wallet wallet=new Wallet(params, kcg);
+        BlockStore blockStore = new MemoryBlockStore(params);
+        chain = new BlockChain(params, wallet, blockStore);
+        PeerGroup peerGroup = new PeerGroup(params, chain);
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        long now = cal.getTimeInMillis() / 1000;
+        peerGroup.setFastCatchupTimeSecs(now);
+        peerGroup.setUserAgent("bip38 claimer", "0.1");
+        peerGroup.addAddress(InetAddress.getLocalHost());
+        peerGroup.addWallet(wallet);
         
-        System.out.println(wc.get(wr.getAccountId()).getXpub());
+        //create lookahead
+        wallet.freshAddress(KeyPurpose.RECEIVE_FUNDS);
+        
+        //run and display balance
+        wallet.addEventListener(new AbstractWalletEventListener() {
+            @Override
+            public synchronized void onCoinsReceived(Wallet w, Transaction tx, Coin prevBalance, Coin newBalance) {
+                System.out.println("\nReceived tx " + tx.getHashAsString());
+                System.out.println(tx.toString());
+            }
+        });
+        peerGroup.startAsync();
+        peerGroup.downloadBlockChain();
+        System.out.println("available balance: "+wallet.getBalance());
     }
     
     public WalletRequest get(String account) throws IOException{

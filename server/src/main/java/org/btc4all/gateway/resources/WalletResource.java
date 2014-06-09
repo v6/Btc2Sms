@@ -61,7 +61,7 @@ public class WalletResource {
                 keyExists = false;
             }
         } while (keyExists);
-        
+        i--;
         //create key and return
         DeterministicKey account = kcg.getActiveKeyChain().getKey(ImmutableList.of(new ChildNumber(i, true)), true);
         kcg.addShadow(account.getPath(), Arrays.asList(rw.getXpub()));
