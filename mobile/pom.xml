@@ -59,7 +59,8 @@
 					<version>${android.plugin.version}</version>
 					<configuration>
 						<sdk>
-							<platform>17</platform>
+							<platform>17</platform> <!-- 20140609 - Nathan Basanese - I should note that the only "Android Virtual Devices" I ran on the android emulator were for platform 13. -->
+							<path>/home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk</path>
 						</sdk>
 												<zipalign>
 							<verbose>true</verbose>
@@ -85,7 +86,7 @@
 			</activation>
 			<modules>
 				<module>btc2sms</module>
-				<module>btc2sms-it</module>
+				<module>btc2sms-it</module> <!-- 20140609 - Nathan Basanese - The "it" at the end, here, stands for "integration tests", unless I miss my guess. -->
 			</modules>
 		</profile>
 		<profile>
