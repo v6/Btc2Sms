@@ -62,7 +62,7 @@ public class PlivoAuthFilter implements Filter {
             for (int i=0; i<pairs.length; i++) {
                 String[] fields = pairs[i].split("=");
                 String name = URLDecoder.decode(fields[0], "UTF-8");
-                String value = URLDecoder.decode(fields[1], "UTF-8");
+                String value = (fields.length>1)?URLDecoder.decode(fields[1], "UTF-8"):"";
                 map.put(name, value);
             }
         }

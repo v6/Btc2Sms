@@ -48,9 +48,19 @@
 			<version>1.7.7</version>
 		</dependency>
 		<dependency>
+		    <groupId>com.plivo</groupId>
+		    <artifactId>plivo-java</artifactId>
+		    <version>3.0.1</version>
+		</dependency>
+		<dependency>
 		    <groupId>com.googlecode.libphonenumber</groupId>
 		    <artifactId>libphonenumber</artifactId>
 		    <version>6.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.rabbitmq</groupId>
+		    <artifactId>amqp-client</artifactId>
+		    <version>3.3.2</version>
 		</dependency>
 	</dependencies>
 	
