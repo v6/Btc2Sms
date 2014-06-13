@@ -28,7 +28,7 @@
 				<artifactId>android-test</artifactId>
 				<version>${platform.version}</version>
 				<scope>provided</scope>
-			</dependency>
+			</dependency><!-- 20140611 - If anything is modified in android, does it need to be modified for android-test, as well? -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -60,6 +60,7 @@
 					<configuration>
 						<sdk>
 							<platform>17</platform>
+							<path></path>
 						</sdk>
 												<zipalign>
 							<verbose>true</verbose>
