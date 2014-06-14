@@ -11,3 +11,5 @@ target
 *.iml
 *.apk
 mobile/btc2sms/target
+mobile/btc2sms/pom.xml
+mobile/btc2sms/pom.xml
