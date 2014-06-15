@@ -6,15 +6,32 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.mime.FormBodyPart;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.message.BasicNameValuePair;
+// Replaced all "org.apache.http." with "android.net.http.". 
+// I have done this to fix the error thrown by proguard upon compilation for release of our Android client. 
+// The error thrown by proguard follows: 
+/*
+[INFO] Warning: library class android.net.http.AndroidHttpClient extends or implements program class org.apache.http.client.HttpClient
+[DEBUG] Note: the configuration refers to the unknown class 'com.android.vending.licensing.ILicensingService'
+[DEBUG] Note: there were 1 references to unknown classes.
+[DEBUG]       You should check your configuration for typos.
+[INFO] Warning: there were 1 instances of library classes depending on program classes.
+[INFO]          You must avoid such dependencies, since the program classes will
+[INFO]          be processed, while the library classes will remain unchanged.
+[INFO] java.io.IOException: Please correct the above warnings first.
+[INFO] 	at proguard.Initializer.execute(Initializer.java:321)
+[INFO] 	at proguard.ProGuard.initialize(ProGuard.java:211)
+[INFO] 	at proguard.ProGuard.execute(ProGuard.java:86)
+[INFO] 	at proguard.ProGuard.main(ProGuard.java:492)
+*/
+import android.net.http.Header;
+import android.net.http.HttpEntity;
+import android.net.http.HttpResponse;
+import android.net.http.client.HttpClient;
+import android.net.http.client.entity.UrlEncodedFormEntity;
+import android.net.http.client.methods.HttpPost;
+import android.net.http.entity.mime.FormBodyPart;
+import android.net.http.entity.mime.MultipartEntityBuilder;
+import android.net.http.message.BasicNameValuePair;
 import org.btc4all.btc2sms.App;
 import org.btc4all.btc2sms.JsonUtils;
 import org.btc4all.btc2sms.R;

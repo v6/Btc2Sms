@@ -27,11 +27,13 @@ hs_err_pid*
 
 #Items to keep unstaged for security reasons. 
 
+mobile/btc2sms/pom.xml
 mobile/pom.xml~
 mobile/random_degubbing_stuph.txt.log.nathan
 mobile/nathan_build_output_stuff.txt
 mobile/nathan_keystore.keystore
 
+/mobile/btc2sms/pom.xml
 /mobile/pom.xml~
 /mobile/random_degubbing_stuph.txt.log.nathan
 /mobile/nathan_build_output_stuff.txt
