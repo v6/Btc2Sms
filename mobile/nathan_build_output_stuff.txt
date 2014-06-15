@@ -1,0 +1,903 @@
+nbas@nbas-XPS-L521X:~/bin/37coins/v6/Btc2Sms/mobile$ mvn -e clean install -P release
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] btc2sms - Parent
+[INFO] btc2sms - Application
+[INFO] btc2sms-it - Integration tests
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building btc2sms - Parent 0.1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ btc2sms-parent ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ btc2sms-parent ---
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/pom.xml to /home/nbas/.m2/repository/org/btc4all/btc2sms-parent/0.1.0-SNAPSHOT/btc2sms-parent-0.1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building btc2sms - Application 0.1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ btc2sms ---
+[INFO] Deleting /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:copy-resources (default) @ btc2sms ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/templates/res
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:generate-sources (default-generate-sources) @ btc2sms ---
+[INFO] ANDROID-904-002: Found aidl files: Count = 0
+[INFO] ANDROID-904-002: Found aidl files: Count = 0
+[INFO] Manifest merging disabled. Using project manifest only
+[INFO] /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt [package, -m, -J, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/r, -M, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml, -S, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res, --auto-add-overlay, -I, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar]
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ btc2sms ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/resources
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/generated-sources/extracted-dependencies/src/main/resources
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:manifest-update (manifestUpdate) @ btc2sms ---
+[INFO] Attempting to update manifest /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[INFO] Testing if node application is application
+[INFO] Made changes to manifest file, updating /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:consume-aar (default-consume-aar) @ btc2sms ---
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ btc2sms ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 61 source files to /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Main.java: Some input files use or override a deprecated API.
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/ui/Main.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java uses unchecked or unsafe operations.
+[WARNING] /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/main/java/org/btc4all/btc2sms/task/HttpTask.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:proguard (default-proguard) @ btc2sms ---
+[INFO] /usr/lib/jvm/java-7-oracle/jre/bin/java [-Xmx512M, -jar, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/proguard/lib/proguard.jar, @proguard.conf, -injars, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes', -injars, /home/nbas/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpclient/4.3.1/httpclient-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpcore/4.3.1/httpcore-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -injars, /home/nbas/.m2/repository/com/rabbitmq/amqp-client/3.2.3/amqp-client-3.2.3.jar(!META-INF/maven/**,!META-INF/MANIFEST.MF), -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar', -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar', -libraryjars, '/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar', -libraryjars, /home/nbas/.m2/repository/com/google/android/android/4.1.1.4/android-4.1.1.4.jar(!org/xml/**,!org/w3c/**,!java/**,!javax/**), -libraryjars, '/home/nbas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar', -libraryjars, '/home/nbas/.m2/repository/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar', -libraryjars, '/home/nbas/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar', -libraryjars, '/home/nbas/.m2/repository/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar', -libraryjars, '/home/nbas/.m2/repository/org/json/json/20080701/json-20080701.jar', -outjars, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar', -dump, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/dump.txt', -printseeds, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/seeds.txt', -printusage, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/usage.txt', -printmapping, '/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt']
+[INFO] Note: there were 186 duplicate class definitions.
+[INFO] Warning: can't write resource [META-INF/LICENSE.txt] (Duplicate zip entry [commons-io-2.4.jar:META-INF/LICENSE.txt])
+[INFO] Warning: can't write resource [META-INF/NOTICE.txt] (Duplicate zip entry [commons-io-2.4.jar:META-INF/NOTICE.txt])
+[INFO] Warning: can't write resource [META-INF/LICENSE.txt] (Duplicate zip entry [commons-codec-1.6.jar:META-INF/LICENSE.txt])
+[INFO] Warning: can't write resource [META-INF/NOTICE.txt] (Duplicate zip entry [commons-codec-1.6.jar:META-INF/NOTICE.txt])
+[INFO] Warning: can't write resource [META-INF/DEPENDENCIES] (Duplicate zip entry [httpcore-4.3.1.jar:META-INF/DEPENDENCIES])
+[INFO] Warning: can't write resource [META-INF/NOTICE] (Duplicate zip entry [httpcore-4.3.1.jar:META-INF/NOTICE])
+[INFO] Warning: can't write resource [META-INF/LICENSE] (Duplicate zip entry [httpcore-4.3.1.jar:META-INF/LICENSE])
+[INFO] Warning: can't write resource [META-INF/DEPENDENCIES] (Duplicate zip entry [httpmime-4.3.1.jar:META-INF/DEPENDENCIES])
+[INFO] Warning: can't write resource [META-INF/NOTICE] (Duplicate zip entry [httpmime-4.3.1.jar:META-INF/NOTICE])
+[INFO] Warning: can't write resource [META-INF/LICENSE] (Duplicate zip entry [httpmime-4.3.1.jar:META-INF/LICENSE])
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ btc2sms ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ btc2sms ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ btc2sms ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:emma (default-emma) @ btc2sms ---
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:dex (default-dex) @ btc2sms ---
+[INFO] /usr/lib/jvm/java-7-oracle/jre/bin/java [-Xmx1024M, -jar, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/lib/dx.jar, --dex, --output=/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/classes.dex, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard-obfuscated.jar]
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ btc2sms ---
+[INFO] Building jar: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.jar
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:apk (default-apk) @ btc2sms ---
+[INFO] Enabling release build for apk.
+[INFO] /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt [package, -f, -M, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/AndroidManifest.xml, -S, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/res, --auto-add-overlay, -I, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar, -F, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.ap_]
+[INFO] 
+[INFO] --- maven-jarsigner-plugin:1.2:sign (signing) @ btc2sms ---
+[INFO] Processing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.apk
+[INFO]    adding: META-INF/MANIFEST.MF
+[INFO]    adding: META-INF/37DEV.SF
+[INFO]    adding: META-INF/37DEV.RSA
+[INFO]   signing: res/layout/activity_main.xml
+[INFO]   signing: res/layout/add_phone_number.xml
+[INFO]   signing: res/layout/help.xml
+[INFO]   signing: res/layout/ignored_phone_numbers.xml
+[INFO]   signing: res/layout/inbox.xml
+[INFO]   signing: res/layout/inbox_item.xml
+[INFO]   signing: res/layout/log_view.xml
+[INFO]   signing: res/layout/pending_message.xml
+[INFO]   signing: res/layout/pending_messages.xml
+[INFO]   signing: res/layout/phone_number.xml
+[INFO]   signing: res/layout/splash.xml
+[INFO]   signing: res/layout/test_phone_numbers.xml
+[INFO]   signing: res/menu/inbox.xml
+[INFO]   signing: res/menu/main.xml
+[INFO]   signing: res/menu/mainmenu.xml
+[INFO]   signing: res/menu/mainmenu_debug.xml
+[INFO]   signing: res/menu/pending_messages.xml
+[INFO]   signing: res/xml/expansion_packs.xml
+[INFO]   signing: res/xml/prefs.xml
+[INFO]   signing: AndroidManifest.xml
+[INFO]   signing: resources.arsc
+[INFO]   signing: res/drawable-hdpi/ic_launcher.png
+[INFO]   signing: res/drawable-hdpi/ic_menu_dialog.png
+[INFO]   signing: res/drawable-hdpi/ic_menu_equalizer.png
+[INFO]   signing: res/drawable-hdpi/ic_menu_link.png
+[INFO]   signing: res/drawable-hdpi/ic_menu_magnet.png
+[INFO]   signing: res/drawable-hdpi/ic_menu_puzzle.png
+[INFO]   signing: res/drawable-hdpi/ic_menu_settings.png
+[INFO]   signing: res/drawable-hdpi/ic_menu_tick.png
+[INFO]   signing: res/drawable-hdpi/icon.png
+[INFO]   signing: res/drawable-hdpi/load_logo.png
+[INFO]   signing: res/drawable-ldpi/ic_menu_dialog.png
+[INFO]   signing: res/drawable-ldpi/ic_menu_equalizer.png
+[INFO]   signing: res/drawable-ldpi/ic_menu_link.png
+[INFO]   signing: res/drawable-ldpi/ic_menu_magnet.png
+[INFO]   signing: res/drawable-ldpi/ic_menu_puzzle.png
+[INFO]   signing: res/drawable-ldpi/ic_menu_settings.png
+[INFO]   signing: res/drawable-ldpi/ic_menu_tick.png
+[INFO]   signing: res/drawable-ldpi/icon.png
+[INFO]   signing: res/drawable-ldpi/load_logo.png
+[INFO]   signing: res/drawable-mdpi/ic_launcher.png
+[INFO]   signing: res/drawable-mdpi/ic_menu_dialog.png
+[INFO]   signing: res/drawable-mdpi/ic_menu_equalizer.png
+[INFO]   signing: res/drawable-mdpi/ic_menu_link.png
+[INFO]   signing: res/drawable-mdpi/ic_menu_magnet.png
+[INFO]   signing: res/drawable-mdpi/ic_menu_puzzle.png
+[INFO]   signing: res/drawable-mdpi/ic_menu_settings.png
+[INFO]   signing: res/drawable-mdpi/ic_menu_tick.png
+[INFO]   signing: res/drawable-mdpi/icon.png
+[INFO]   signing: res/drawable-mdpi/load_logo.png
+[INFO]   signing: res/drawable-xhdpi/ic_launcher.png
+[INFO]   signing: res/drawable-xxhdpi/ic_launcher.png
+[INFO]   signing: classes.dex
+[INFO]   signing: org/apache/http/client/version.properties
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_cyrillic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_english.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_german.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_hungarian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_polish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_romanian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_russian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_approx_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_approx_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_cyrillic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_english.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_german.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_hungarian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_polish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_romanian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_russian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_exact_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_hebrew_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_languages.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_cyrillic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_english.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_german.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_hungarian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_polish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_romanian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_russian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/ash_rules_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_arabic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_cyrillic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_czech.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_dutch.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_english.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_german.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_greek.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_greeklatin.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_hungarian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_italian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_polish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_portuguese.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_romanian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_russian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_approx_turkish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_approx_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_arabic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_cyrillic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_czech.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_dutch.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_english.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_german.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_greek.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_greeklatin.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_hungarian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_italian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_polish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_portuguese.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_romanian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_russian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_exact_turkish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_hebrew_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_languages.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_arabic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_cyrillic.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_czech.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_dutch.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_english.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_german.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_greek.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_greeklatin.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_hungarian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_italian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_polish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_portuguese.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_romanian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_russian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/gen_rules_turkish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/lang.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_approx_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_approx_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_approx_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_approx_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_approx_italian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_approx_portuguese.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_approx_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_approx_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_italian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_portuguese.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_exact_spanish.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_hebrew_common.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_languages.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_rules_any.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_rules_french.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_rules_hebrew.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_rules_italian.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_rules_portuguese.txt
+[INFO]   signing: org/apache/commons/codec/language/bm/sep_rules_spanish.txt
+[INFO]   signing: org/apache/http/version.properties
+[INFO]   signing: org/apache/http/entity/mime/version.properties
+[INFO] jar signed.
+[INFO] 
+[INFO] Warning: 
+[INFO] No -tsa or -tsacert is provided and this jar is not timestamped. Without a timestamp, users may not be able to validate this jar after the signer certificate's expiration date (2041-10-25) or after any future revocation date.
+[INFO] Processing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.jar
+[INFO]  updating: META-INF/MANIFEST.MF
+[INFO]    adding: META-INF/37DEV.SF
+[INFO]    adding: META-INF/37DEV.RSA
+[INFO]    adding: org/
+[INFO]    adding: org/btc4all/
+[INFO]    adding: org/btc4all/btc2sms/
+[INFO]    adding: org/btc4all/btc2sms/receiver/
+[INFO]    adding: org/btc4all/btc2sms/task/
+[INFO]    adding: org/btc4all/btc2sms/service/
+[INFO]    adding: org/btc4all/btc2sms/ui/
+[INFO]    adding: org/btc4all/btc2sms/ui/config/
+[INFO]   signing: org/btc4all/btc2sms/App.class
+[INFO]   signing: org/btc4all/btc2sms/IncomingSms.class
+[INFO]   signing: org/btc4all/btc2sms/Outbox$1.class
+[INFO]   signing: org/btc4all/btc2sms/R$drawable.class
+[INFO]   signing: org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor$1.class
+[INFO]   signing: org/btc4all/btc2sms/IncomingCall.class
+[INFO]   signing: org/btc4all/btc2sms/R$dimen.class
+[INFO]   signing: org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor.class
+[INFO]   signing: org/btc4all/btc2sms/MessagingObserver.class
+[INFO]   signing: org/btc4all/btc2sms/R$array.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/DequeueOutgoingMessageReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/ConnectivityChangeReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/NudgeReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/MessageDeliveryNotifier.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/OutgoingMessageTimeout.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/OutgoingMessageRetry.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/ReenableWifiReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/SmsReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/ExpansionPackInstallReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/StartAmqpConsumer.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/MessageStatusNotifier.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/IncomingMessageRetry.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/OutgoingSmsReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/DeviceStatusReceiver.class
+[INFO]   signing: org/btc4all/btc2sms/receiver/OutgoingMessagePoller.class
+[INFO]   signing: org/btc4all/btc2sms/OutgoingSms.class
+[INFO]   signing: org/btc4all/btc2sms/R$attr.class
+[INFO]   signing: org/btc4all/btc2sms/IncomingMms.class
+[INFO]   signing: org/btc4all/btc2sms/R$style.class
+[INFO]   signing: org/btc4all/btc2sms/ValidationException.class
+[INFO]   signing: org/btc4all/btc2sms/IncomingMessage$ProcessingState.class
+[INFO]   signing: org/btc4all/btc2sms/OutgoingMessage$ProcessingState.class
+[INFO]   signing: org/btc4all/btc2sms/R$menu.class
+[INFO]   signing: org/btc4all/btc2sms/QueuedMessage.class
+[INFO]   signing: org/btc4all/btc2sms/JsonUtils.class
+[INFO]   signing: org/btc4all/btc2sms/Base64Coder.class
+[INFO]   signing: org/btc4all/btc2sms/Inbox.class
+[INFO]   signing: org/btc4all/btc2sms/Outbox.class
+[INFO]   signing: org/btc4all/btc2sms/IncomingMessage$Direction.class
+[INFO]   signing: org/btc4all/btc2sms/DatabaseHelper.class
+[INFO]   signing: org/btc4all/btc2sms/OutgoingMessage.class
+[INFO]   signing: org/btc4all/btc2sms/OutgoingSms$ScheduleInfo.class
+[INFO]   signing: org/btc4all/btc2sms/task/HttpTask$1.class
+[INFO]   signing: org/btc4all/btc2sms/task/HttpTask.class
+[INFO]   signing: org/btc4all/btc2sms/task/CheckConnectivityTask.class
+[INFO]   signing: org/btc4all/btc2sms/task/ForwarderTask.class
+[INFO]   signing: org/btc4all/btc2sms/task/BaseHttpTask.class
+[INFO]   signing: org/btc4all/btc2sms/task/PollerTask.class
+[INFO]   signing: org/btc4all/btc2sms/IncomingMessage$1.class
+[INFO]   signing: org/btc4all/btc2sms/BuildConfig.class
+[INFO]   signing: org/btc4all/btc2sms/OutgoingMessage$ScheduleInfo.class
+[INFO]   signing: org/btc4all/btc2sms/MessagingUtils.class
+[INFO]   signing: org/btc4all/btc2sms/MmsPart.class
+[INFO]   signing: org/btc4all/btc2sms/R.class
+[INFO]   signing: org/btc4all/btc2sms/R$xml.class
+[INFO]   signing: org/btc4all/btc2sms/R$id.class
+[INFO]   signing: org/btc4all/btc2sms/XmlUtils.class
+[INFO]   signing: org/btc4all/btc2sms/OutgoingMessage$1.class
+[INFO]   signing: org/btc4all/btc2sms/App$ConnectivityCheckState.class
+[INFO]   signing: org/btc4all/btc2sms/IncomingMessage.class
+[INFO]   signing: org/btc4all/btc2sms/App$1.class
+[INFO]   signing: org/btc4all/btc2sms/R$string.class
+[INFO]   signing: org/btc4all/btc2sms/service/ForegroundService.class
+[INFO]   signing: org/btc4all/btc2sms/service/EnabledChangedService.class
+[INFO]   signing: org/btc4all/btc2sms/service/CheckMessagingService.class
+[INFO]   signing: org/btc4all/btc2sms/service/AmqpHeartbeatService.class
+[INFO]   signing: org/btc4all/btc2sms/service/AmqpConsumerService.class
+[INFO]   signing: org/btc4all/btc2sms/HelloAndroidActivity.class
+[INFO]   signing: org/btc4all/btc2sms/AmqpConsumer$ConsumeThread.class
+[INFO]   signing: org/btc4all/btc2sms/ui/ExpansionPacks$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/TestPhoneNumbers$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingForwarder.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$5.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$1AndroidJS$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages$5.class
+[INFO]   signing: org/btc4all/btc2sms/ui/TestPhoneNumbers$1$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/Help.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$1AndroidJS$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/Main.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$DismissDialogListener.class
+[INFO]   signing: org/btc4all/btc2sms/ui/Help$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages$4.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$TestTask.class
+[INFO]   signing: org/btc4all/btc2sms/ui/Prefs.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages$3.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingSentSms$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages$2$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/TestPhoneNumbers$3.class
+[INFO]   signing: org/btc4all/btc2sms/ui/TestPhoneNumbers.class
+[INFO]   signing: org/btc4all/btc2sms/ui/ExpansionPacks.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingForwarder$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingMmsInbox$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages$6.class
+[INFO]   signing: org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingForwarder$2$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/TestPhoneNumbers$1$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/Prefs$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$3.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingForwarder$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$6.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingMmsInbox.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingSmsInbox$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/IgnoredPhoneNumbers.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$4.class
+[INFO]   signing: org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$3.class
+[INFO]   signing: org/btc4all/btc2sms/ui/TestPhoneNumbers$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$1AndroidJS$1$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/Help$2.class
+[INFO]   signing: org/btc4all/btc2sms/ui/config/AppConfig.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$1AndroidJS$2$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$1.class
+[INFO]   signing: org/btc4all/btc2sms/ui/LogView$1AndroidJS.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingSentSms.class
+[INFO]   signing: org/btc4all/btc2sms/ui/MessagingSmsInbox.class
+[INFO]   signing: org/btc4all/btc2sms/ui/PendingMessages$2.class
+[INFO]   signing: org/btc4all/btc2sms/R$layout.class
+[INFO]   signing: org/btc4all/btc2sms/AmqpConsumer.class
+[INFO]   signing: org/btc4all/btc2sms/CallListener.class
+[INFO] jar signed.
+[INFO] 
+[INFO] Warning: 
+[INFO] No -tsa or -tsacert is provided and this jar is not timestamped. Without a timestamp, users may not be able to validate this jar after the signer certificate's expiration date (2041-10-25) or after any future revocation date.
+[INFO] 2 archive(s) processed
+[INFO] 
+[INFO] --- maven-jarsigner-plugin:1.2:verify (signing) @ btc2sms ---
+[INFO] Processing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.apk
+[INFO] 
+[INFO] s      18500 Mon Jun 09 17:32:02 PDT 2014 META-INF/MANIFEST.MF
+[INFO]        18621 Mon Jun 09 17:32:02 PDT 2014 META-INF/37DEV.SF
+[INFO]         2169 Mon Jun 09 17:32:02 PDT 2014 META-INF/37DEV.RSA
+[INFO] sm       844 Mon Jun 09 17:32:02 PDT 2014 res/layout/activity_main.xml
+[INFO] sm       500 Mon Jun 09 17:32:02 PDT 2014 res/layout/add_phone_number.xml
+[INFO] sm      1312 Mon Jun 09 17:32:02 PDT 2014 res/layout/help.xml
+[INFO] sm      1856 Mon Jun 09 17:32:02 PDT 2014 res/layout/ignored_phone_numbers.xml
+[INFO] sm      1192 Mon Jun 09 17:32:02 PDT 2014 res/layout/inbox.xml
+[INFO] sm      1164 Mon Jun 09 17:32:02 PDT 2014 res/layout/inbox_item.xml
+[INFO] sm      2224 Mon Jun 09 17:32:02 PDT 2014 res/layout/log_view.xml
+[INFO] sm      1544 Mon Jun 09 17:32:02 PDT 2014 res/layout/pending_message.xml
+[INFO] sm      1076 Mon Jun 09 17:32:02 PDT 2014 res/layout/pending_messages.xml
+[INFO] sm       608 Mon Jun 09 17:32:02 PDT 2014 res/layout/phone_number.xml
+[INFO] sm       996 Mon Jun 09 17:32:02 PDT 2014 res/layout/splash.xml
+[INFO] sm      1616 Mon Jun 09 17:32:02 PDT 2014 res/layout/test_phone_numbers.xml
+[INFO] sm       476 Mon Jun 09 17:32:02 PDT 2014 res/menu/inbox.xml
+[INFO] sm       564 Mon Jun 09 17:32:02 PDT 2014 res/menu/main.xml
+[INFO] sm       724 Mon Jun 09 17:32:02 PDT 2014 res/menu/mainmenu.xml
+[INFO] sm       724 Mon Jun 09 17:32:02 PDT 2014 res/menu/mainmenu_debug.xml
+[INFO] sm       600 Mon Jun 09 17:32:02 PDT 2014 res/menu/pending_messages.xml
+[INFO] sm      1296 Mon Jun 09 17:32:02 PDT 2014 res/xml/expansion_packs.xml
+[INFO] sm      9420 Mon Jun 09 17:32:02 PDT 2014 res/xml/prefs.xml
+[INFO] sm     12184 Mon Jun 09 17:32:02 PDT 2014 AndroidManifest.xml
+[INFO] sm     14008 Mon Jun 09 17:32:02 PDT 2014 resources.arsc
+[INFO] sm      5964 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_launcher.png
+[INFO] sm      1541 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_menu_dialog.png
+[INFO] sm      1208 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_menu_equalizer.png
+[INFO] sm      2124 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_menu_link.png
+[INFO] sm      2016 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_menu_magnet.png
+[INFO] sm      1388 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_menu_puzzle.png
+[INFO] sm      2350 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_menu_settings.png
+[INFO] sm      1939 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/ic_menu_tick.png
+[INFO] sm      2411 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/icon.png
+[INFO] sm     15386 Mon Jun 09 17:32:02 PDT 2014 res/drawable-hdpi/load_logo.png
+[INFO] sm       885 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/ic_menu_dialog.png
+[INFO] sm       992 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/ic_menu_equalizer.png
+[INFO] sm      1462 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/ic_menu_link.png
+[INFO] sm       950 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/ic_menu_magnet.png
+[INFO] sm      1047 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/ic_menu_puzzle.png
+[INFO] sm      1208 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/ic_menu_settings.png
+[INFO] sm      1215 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/ic_menu_tick.png
+[INFO] sm      1520 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/icon.png
+[INFO] sm      6016 Mon Jun 09 17:32:02 PDT 2014 res/drawable-ldpi/load_logo.png
+[INFO] sm      3112 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_launcher.png
+[INFO] sm       899 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_menu_dialog.png
+[INFO] sm       841 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_menu_equalizer.png
+[INFO] sm      1311 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_menu_link.png
+[INFO] sm      1249 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_menu_magnet.png
+[INFO] sm      1442 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_menu_puzzle.png
+[INFO] sm      1766 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_menu_settings.png
+[INFO] sm      1722 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/ic_menu_tick.png
+[INFO] sm      1792 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/icon.png
+[INFO] sm      8603 Mon Jun 09 17:32:02 PDT 2014 res/drawable-mdpi/load_logo.png
+[INFO] sm      9355 Mon Jun 09 17:32:02 PDT 2014 res/drawable-xhdpi/ic_launcher.png
+[INFO] sm     17889 Mon Jun 09 17:32:02 PDT 2014 res/drawable-xxhdpi/ic_launcher.png
+[INFO] sm    476952 Mon Jun 09 17:32:02 PDT 2014 classes.dex
+[INFO] sm       909 Mon Jun 09 17:32:02 PDT 2014 org/apache/http/client/version.properties
+[INFO] sm      4678 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_any.txt
+[INFO] sm      4856 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_common.txt
+[INFO] sm       831 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_cyrillic.txt
+[INFO] sm      1489 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_english.txt
+[INFO] sm      1224 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_french.txt
+[INFO] sm      1852 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_german.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_hebrew.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_hungarian.txt
+[INFO] sm      2228 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_polish.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_romanian.txt
+[INFO] sm      1427 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_russian.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_approx_spanish.txt
+[INFO] sm      1952 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_any.txt
+[INFO] sm      1736 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_approx_common.txt
+[INFO] sm      1095 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_common.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_cyrillic.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_english.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_french.txt
+[INFO] sm       826 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_german.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_hebrew.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_hungarian.txt
+[INFO] sm       875 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_polish.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_romanian.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_russian.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_exact_spanish.txt
+[INFO] sm      2854 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_hebrew_common.txt
+[INFO] sm       888 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_languages.txt
+[INFO] sm      9473 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_any.txt
+[INFO] sm      2366 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_cyrillic.txt
+[INFO] sm      2970 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_english.txt
+[INFO] sm      2274 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_french.txt
+[INFO] sm      2783 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_german.txt
+[INFO] sm      1472 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_hebrew.txt
+[INFO] sm      1960 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_hungarian.txt
+[INFO] sm      4167 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_polish.txt
+[INFO] sm      1526 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_romanian.txt
+[INFO] sm      3980 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_russian.txt
+[INFO] sm      2073 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/ash_rules_spanish.txt
+[INFO] sm      3870 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_any.txt
+[INFO] sm       927 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_arabic.txt
+[INFO] sm      4874 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_common.txt
+[INFO] sm       831 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_cyrillic.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_czech.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_dutch.txt
+[INFO] sm      1489 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_english.txt
+[INFO] sm       942 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_french.txt
+[INFO] sm      1853 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_german.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_greek.txt
+[INFO] sm       845 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_greeklatin.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_hebrew.txt
+[INFO] sm       831 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_hungarian.txt
+[INFO] sm       831 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_italian.txt
+[INFO] sm      2183 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_polish.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_portuguese.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_romanian.txt
+[INFO] sm      1437 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_russian.txt
+[INFO] sm       868 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_spanish.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_approx_turkish.txt
+[INFO] sm      1123 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_any.txt
+[INFO] sm      1769 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_approx_common.txt
+[INFO] sm       816 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_arabic.txt
+[INFO] sm      1093 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_common.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_cyrillic.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_czech.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_dutch.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_english.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_french.txt
+[INFO] sm       826 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_german.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_greek.txt
+[INFO] sm       817 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_greeklatin.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_hebrew.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_hungarian.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_italian.txt
+[INFO] sm       874 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_polish.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_portuguese.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_romanian.txt
+[INFO] sm       831 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_russian.txt
+[INFO] sm       832 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_spanish.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_exact_turkish.txt
+[INFO] sm      2700 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_hebrew_common.txt
+[INFO] sm       951 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_languages.txt
+[INFO] sm     13019 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_any.txt
+[INFO] sm      1877 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_arabic.txt
+[INFO] sm      2300 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_cyrillic.txt
+[INFO] sm      1561 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_czech.txt
+[INFO] sm      1867 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_dutch.txt
+[INFO] sm      3013 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_english.txt
+[INFO] sm      2778 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_french.txt
+[INFO] sm      2731 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_german.txt
+[INFO] sm      2918 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_greek.txt
+[INFO] sm      3041 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_greeklatin.txt
+[INFO] sm      1462 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_hebrew.txt
+[INFO] sm      1887 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_hungarian.txt
+[INFO] sm      1873 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_italian.txt
+[INFO] sm      4112 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_polish.txt
+[INFO] sm      2600 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_portuguese.txt
+[INFO] sm      1509 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_romanian.txt
+[INFO] sm      3042 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_russian.txt
+[INFO] sm      2382 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_spanish.txt
+[INFO] sm      1386 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/gen_rules_turkish.txt
+[INFO] sm      7462 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/lang.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_approx_any.txt
+[INFO] sm      3195 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_approx_common.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_approx_french.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_approx_hebrew.txt
+[INFO] sm       830 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_approx_italian.txt
+[INFO] sm       831 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_approx_portuguese.txt
+[INFO] sm       831 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_approx_spanish.txt
+[INFO] sm       817 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_any.txt
+[INFO] sm      1685 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_approx_common.txt
+[INFO] sm      1109 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_common.txt
+[INFO] sm       815 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_french.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_hebrew.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_italian.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_portuguese.txt
+[INFO] sm       812 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_exact_spanish.txt
+[INFO] sm      2187 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_hebrew_common.txt
+[INFO] sm       849 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_languages.txt
+[INFO] sm      4632 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_rules_any.txt
+[INFO] sm      2224 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_rules_french.txt
+[INFO] sm      1459 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_rules_hebrew.txt
+[INFO] sm      1848 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_rules_italian.txt
+[INFO] sm      2575 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_rules_portuguese.txt
+[INFO] sm      2480 Mon Jun 09 17:32:02 PDT 2014 org/apache/commons/codec/language/bm/sep_rules_spanish.txt
+[INFO] sm       903 Mon Jun 09 17:32:02 PDT 2014 org/apache/http/version.properties
+[INFO] sm       907 Mon Jun 09 17:32:02 PDT 2014 org/apache/http/entity/mime/version.properties
+[INFO] 
+[INFO]   s = signature was verified 
+[INFO]   m = entry is listed in manifest
+[INFO]   k = at least one certificate was found in keystore
+[INFO]   i = at least one certificate was found in identity scope
+[INFO] 
+[INFO] jar verified.
+[INFO] 
+[INFO] Warning: 
+[INFO] This jar contains entries whose certificate chain is not validated.
+[INFO] This jar contains signatures that does not include a timestamp. Without a timestamp, users may not be able to validate this jar after the signer certificate's expiration date (2041-10-25) or after any future revocation date.
+[INFO] 
+[INFO] Re-run with the -verbose and -certs options for more details.
+[INFO] Processing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.jar
+[INFO] 
+[INFO] s      12522 Mon Jun 09 17:32:04 PDT 2014 META-INF/MANIFEST.MF
+[INFO]        12582 Mon Jun 09 17:32:04 PDT 2014 META-INF/37DEV.SF
+[INFO]         2169 Mon Jun 09 17:32:04 PDT 2014 META-INF/37DEV.RSA
+[INFO]            0 Mon Jun 09 17:32:04 PDT 2014 META-INF/
+[INFO]            0 Mon Jun 09 17:32:04 PDT 2014 META-INF/maven/
+[INFO]            0 Mon Jun 09 17:32:04 PDT 2014 META-INF/maven/org.btc4all/
+[INFO]            0 Mon Jun 09 17:32:04 PDT 2014 META-INF/maven/org.btc4all/btc2sms/
+[INFO]            0 Mon Jun 09 17:31:42 PDT 2014 org/
+[INFO]            0 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/
+[INFO]            0 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/
+[INFO]            0 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/
+[INFO]            0 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/task/
+[INFO]            0 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/service/
+[INFO]            0 Mon Jun 09 17:31:44 PDT 2014 org/btc4all/btc2sms/ui/
+[INFO]            0 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/config/
+[INFO] sm      6990 Mon Jun 09 17:31:32 PDT 2014 META-INF/maven/org.btc4all/btc2sms/pom.xml
+[INFO] sm       112 Mon Jun 09 17:32:02 PDT 2014 META-INF/maven/org.btc4all/btc2sms/pom.properties
+[INFO] sm     28838 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/App.class
+[INFO] sm      2360 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/IncomingSms.class
+[INFO] sm      1230 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/Outbox$1.class
+[INFO] sm       738 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$drawable.class
+[INFO] sm      2358 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor$1.class
+[INFO] sm      1541 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/IncomingCall.class
+[INFO] sm       464 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$dimen.class
+[INFO] sm      1726 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/AmqpConsumer$HeartbeatExecutor.class
+[INFO] sm      2464 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/MessagingObserver.class
+[INFO] sm       544 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$array.class
+[INFO] sm       955 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/DequeueOutgoingMessageReceiver.class
+[INFO] sm       860 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/ConnectivityChangeReceiver.class
+[INFO] sm       557 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/NudgeReceiver.class
+[INFO] sm      1532 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/MessageDeliveryNotifier.class
+[INFO] sm      1279 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/OutgoingMessageTimeout.class
+[INFO] sm      1208 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/OutgoingMessageRetry.class
+[INFO] sm      1140 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/ReenableWifiReceiver.class
+[INFO] sm      2668 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/SmsReceiver.class
+[INFO] sm      1485 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/ExpansionPackInstallReceiver.class
+[INFO] sm       930 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/StartAmqpConsumer.class
+[INFO] sm      1903 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/MessageStatusNotifier.class
+[INFO] sm      1205 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/IncomingMessageRetry.class
+[INFO] sm      2425 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/OutgoingSmsReceiver.class
+[INFO] sm      2034 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/DeviceStatusReceiver.class
+[INFO] sm       801 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/receiver/OutgoingMessagePoller.class
+[INFO] sm      4258 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/OutgoingSms.class
+[INFO] sm       343 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$attr.class
+[INFO] sm      5581 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/IncomingMms.class
+[INFO] sm       434 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$style.class
+[INFO] sm       389 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ValidationException.class
+[INFO] sm      1394 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/IncomingMessage$ProcessingState.class
+[INFO] sm      1386 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/OutgoingMessage$ProcessingState.class
+[INFO] sm       530 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$menu.class
+[INFO] sm      2500 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/QueuedMessage.class
+[INFO] sm      6762 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/JsonUtils.class
+[INFO] sm      4216 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/Base64Coder.class
+[INFO] sm      4514 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/Inbox.class
+[INFO] sm      8469 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/Outbox.class
+[INFO] sm      1185 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/IncomingMessage$Direction.class
+[INFO] sm      8009 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/DatabaseHelper.class
+[INFO] sm      5536 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/OutgoingMessage.class
+[INFO] sm       676 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/OutgoingSms$ScheduleInfo.class
+[INFO] sm       899 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/task/HttpTask$1.class
+[INFO] sm      8901 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/task/HttpTask.class
+[INFO] sm      3399 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/task/CheckConnectivityTask.class
+[INFO] sm      1426 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/task/ForwarderTask.class
+[INFO] sm      8036 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/task/BaseHttpTask.class
+[INFO] sm      1462 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/task/PollerTask.class
+[INFO] sm       917 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/IncomingMessage$1.class
+[INFO] sm       347 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/BuildConfig.class
+[INFO] sm       613 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/OutgoingMessage$ScheduleInfo.class
+[INFO] sm      6585 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/MessagingUtils.class
+[INFO] sm      3118 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/MmsPart.class
+[INFO] sm       781 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R.class
+[INFO] sm       428 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$xml.class
+[INFO] sm      1445 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$id.class
+[INFO] sm      4297 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/XmlUtils.class
+[INFO] sm       914 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/OutgoingMessage$1.class
+[INFO] sm       832 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/App$ConnectivityCheckState.class
+[INFO] sm      5469 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/IncomingMessage.class
+[INFO] sm      1032 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/App$1.class
+[INFO] sm      1433 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$string.class
+[INFO] sm      4902 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/service/ForegroundService.class
+[INFO] sm      2534 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/service/EnabledChangedService.class
+[INFO] sm      3145 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/service/CheckMessagingService.class
+[INFO] sm      1133 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/service/AmqpHeartbeatService.class
+[INFO] sm      1283 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/service/AmqpConsumerService.class
+[INFO] sm       843 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/HelloAndroidActivity.class
+[INFO] sm      3043 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/AmqpConsumer$ConsumeThread.class
+[INFO] sm       819 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/ExpansionPacks$1.class
+[INFO] sm       936 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/TestPhoneNumbers$2.class
+[INFO] sm      4858 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingForwarder.class
+[INFO] sm     12127 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView.class
+[INFO] sm       811 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$2.class
+[INFO] sm       886 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$5.class
+[INFO] sm      1052 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$1AndroidJS$2.class
+[INFO] sm       903 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages$5.class
+[INFO] sm       977 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/TestPhoneNumbers$1$1.class
+[INFO] sm      2568 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/Help.class
+[INFO] sm       941 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$1AndroidJS$1.class
+[INFO] sm      1449 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$2.class
+[INFO] sm       957 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$2.class
+[INFO] sm       802 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/Main.class
+[INFO] sm      1158 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$DismissDialogListener.class
+[INFO] sm       858 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/Help$1.class
+[INFO] sm      2951 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages$4.class
+[INFO] sm      1188 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$TestTask.class
+[INFO] sm      7901 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/Prefs.class
+[INFO] sm      1243 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages$3.class
+[INFO] sm       821 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages$1.class
+[INFO] sm      2371 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingSentSms$1.class
+[INFO] sm      1335 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages$2$1.class
+[INFO] sm      1380 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/TestPhoneNumbers$3.class
+[INFO] sm      4277 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/TestPhoneNumbers.class
+[INFO] sm      3045 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/ExpansionPacks.class
+[INFO] sm       771 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$1.class
+[INFO] sm      2066 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingForwarder$1.class
+[INFO] sm      2473 Mon Jun 09 17:31:44 PDT 2014 org/btc4all/btc2sms/ui/MessagingMmsInbox$1.class
+[INFO] sm       936 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages$6.class
+[INFO] sm      2488 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1.class
+[INFO] sm      1805 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingForwarder$2$1.class
+[INFO] sm      1416 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/TestPhoneNumbers$1$2.class
+[INFO] sm      1118 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/Prefs$1.class
+[INFO] sm       768 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$3.class
+[INFO] sm      2211 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingForwarder$2.class
+[INFO] sm      1099 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$6.class
+[INFO] sm      2319 Mon Jun 09 17:31:44 PDT 2014 org/btc4all/btc2sms/ui/MessagingMmsInbox.class
+[INFO] sm      2377 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingSmsInbox$1.class
+[INFO] sm      4585 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/IgnoredPhoneNumbers.class
+[INFO] sm       775 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$4.class
+[INFO] sm      1407 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$3.class
+[INFO] sm      2452 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/TestPhoneNumbers$1.class
+[INFO] sm      1607 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$1AndroidJS$1$1.class
+[INFO] sm      1426 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/Help$2.class
+[INFO] sm      1532 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/config/AppConfig.class
+[INFO] sm       928 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$1AndroidJS$2$1.class
+[INFO] sm       995 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/IgnoredPhoneNumbers$1$1.class
+[INFO] sm      3094 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/LogView$1AndroidJS.class
+[INFO] sm      7812 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages.class
+[INFO] sm      2901 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingSentSms.class
+[INFO] sm      2640 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/MessagingSmsInbox.class
+[INFO] sm      2262 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/ui/PendingMessages$2.class
+[INFO] sm       801 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/R$layout.class
+[INFO] sm      8242 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/AmqpConsumer.class
+[INFO] sm      1356 Mon Jun 09 17:31:42 PDT 2014 org/btc4all/btc2sms/CallListener.class
+[INFO] 
+[INFO]   s = signature was verified 
+[INFO]   m = entry is listed in manifest
+[INFO]   k = at least one certificate was found in keystore
+[INFO]   i = at least one certificate was found in identity scope
+[INFO] 
+[INFO] jar verified.
+[INFO] 
+[INFO] Warning: 
+[INFO] This jar contains entries whose certificate chain is not validated.
+[INFO] This jar contains signatures that does not include a timestamp. Without a timestamp, users may not be able to validate this jar after the signer certificate's expiration date (2041-10-25) or after any future revocation date.
+[INFO] 
+[INFO] Re-run with the -verbose and -certs options for more details.
+[INFO] 2 archive(s) processed
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:zipalign (alignApk) @ btc2sms ---
+[INFO] Running command: /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/tools/zipalign
+[INFO] with parameters: [-v, -f, 4, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.apk, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk]
+[INFO] Attach /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk to the project
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.8:attach-artifact (attach-signed-aligned) @ btc2sms ---
+Downloading: http://repo.maven.apache.org/maven2/junit/junit/4.10/junit-4.10.pom
+Downloaded: http://repo.maven.apache.org/maven2/junit/junit/4.10/junit-4.10.pom (3 KB at 10.1 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom (481 B at 12.4 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom (6 KB at 133.5 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.1/maven-plugin-api-2.0.1.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.1/maven-plugin-api-2.0.1.pom (643 B at 15.7 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.1/maven-2.0.1.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/apache/maven/maven/2.0.1/maven-2.0.1.pom (12 KB at 101.2 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom (2 KB at 29.2 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom (2 KB at 34.5 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.jar
+Downloading: http://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
+Downloaded: http://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar (276 KB at 607.3 KB/sec)
+Downloaded: http://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.jar (262 KB at 485.3 KB/sec)
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:internal-pre-integration-test (default-internal-pre-integration-test) @ btc2sms ---
+[INFO] No InstrumentationRunner found - skipping tests
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:internal-integration-test (default-internal-integration-test) @ btc2sms ---
+[INFO] No InstrumentationRunner found - skipping tests
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.1:install (default-install) @ btc2sms ---
+Downloading: http://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.pom
+Downloaded: http://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.pom (4 KB at 98.8 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.jar
+Downloaded: http://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.jar (152 KB at 744.2 KB/sec)
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.apk to /home/nbas/.m2/repository/org/btc4all/btc2sms/0.1.0-SNAPSHOT/btc2sms-0.1.0-SNAPSHOT.apk
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/pom.xml to /home/nbas/.m2/repository/org/btc4all/btc2sms/0.1.0-SNAPSHOT/btc2sms-0.1.0-SNAPSHOT.pom
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms.jar to /home/nbas/.m2/repository/org/btc4all/btc2sms/0.1.0-SNAPSHOT/btc2sms-0.1.0-SNAPSHOT.jar
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk to /home/nbas/.m2/repository/org/btc4all/btc2sms/0.1.0-SNAPSHOT/btc2sms-0.1.0-SNAPSHOT-aligned.apk
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/btc2sms-signed-aligned.apk to /home/nbas/.m2/repository/org/btc4all/btc2sms/0.1.0-SNAPSHOT/btc2sms-0.1.0-SNAPSHOT-signed-aligned.apk
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms/target/proguard/mapping.txt to /home/nbas/.m2/repository/org/btc4all/btc2sms/0.1.0-SNAPSHOT/btc2sms-0.1.0-SNAPSHOT-release.map
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building btc2sms-it - Integration tests 0.1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://repo.maven.apache.org/maven2/com/google/android/android-test/4.1.1.4/android-test-4.1.1.4.pom
+Downloaded: http://repo.maven.apache.org/maven2/com/google/android/android-test/4.1.1.4/android-test-4.1.1.4.pom (3 KB at 54.2 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/com/google/android/android-test/4.1.1.4/android-test-4.1.1.4.jar
+Downloaded: http://repo.maven.apache.org/maven2/com/google/android/android-test/4.1.1.4/android-test-4.1.1.4.jar (40 KB at 452.2 KB/sec)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ btc2sms-it ---
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:generate-sources (default-generate-sources) @ btc2sms-it ---
+[INFO] ANDROID-904-002: Found aidl files: Count = 0
+[INFO] ANDROID-904-002: Found aidl files: Count = 0
+[INFO] Manifest merging disabled. Using project manifest only
+[INFO] /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt [package, -m, -J, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/generated-sources/r, -M, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/AndroidManifest.xml, -S, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/res, --auto-add-overlay, -I, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar]
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ btc2sms-it ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/src/main/resources
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/generated-sources/extracted-dependencies/src/main/resources
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:consume-aar (default-consume-aar) @ btc2sms-it ---
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ btc2sms-it ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/classes
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:proguard (default-proguard) @ btc2sms-it ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ btc2sms-it ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ btc2sms-it ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ btc2sms-it ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:emma (default-emma) @ btc2sms-it ---
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:dex (default-dex) @ btc2sms-it ---
+[INFO] /usr/lib/jvm/java-7-oracle/jre/bin/java [-Xmx1024M, -jar, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/lib/dx.jar, --dex, --output=/home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/classes.dex, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/classes]
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ btc2sms-it ---
+[INFO] Building jar: /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/btc2sms-it.jar
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:apk (default-apk) @ btc2sms-it ---
+[INFO] Enabling debug build for apk.
+[INFO] /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/build-tools/19.1.0/aapt [package, -f, -M, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/AndroidManifest.xml, -S, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/res, --auto-add-overlay, -I, /home/nbas/bin/37coins/adt-bundle-linux-x86_64-20140321/sdk/platforms/android-17/android.jar, -F, /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/btc2sms-it.ap_, --debug-mode]
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:internal-pre-integration-test (default-internal-pre-integration-test) @ btc2sms-it ---
+[INFO] 
+[INFO] --- android-maven-plugin:3.8.0:internal-integration-test (default-internal-integration-test) @ btc2sms-it ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.1:install (default-install) @ btc2sms-it ---
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/btc2sms-it.apk to /home/nbas/.m2/repository/org/btc4all/btc2sms-it/0.1.0-SNAPSHOT/btc2sms-it-0.1.0-SNAPSHOT.apk
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/pom.xml to /home/nbas/.m2/repository/org/btc4all/btc2sms-it/0.1.0-SNAPSHOT/btc2sms-it-0.1.0-SNAPSHOT.pom
+[INFO] Installing /home/nbas/bin/37coins/v6/Btc2Sms/mobile/btc2sms-it/target/btc2sms-it.jar to /home/nbas/.m2/repository/org/btc4all/btc2sms-it/0.1.0-SNAPSHOT/btc2sms-it-0.1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] btc2sms - Parent .................................. SUCCESS [  0.137 s]
+[INFO] btc2sms - Application ............................. SUCCESS [ 27.338 s]
+[INFO] btc2sms-it - Integration tests .................... SUCCESS [  1.957 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 30.346 s
+[INFO] Finished at: 2014-06-09T17:32:09-08:00
+[INFO] Final Memory: 26M/428M
+[INFO] ------------------------------------------------------------------------
+nbas@nbas-XPS-L521X:~/bin/37coins/v6/Btc2Sms/mobile$ ls
+btc2sms  btc2sms-it  build_for_nathan.sh  nathan_keystore.keystore  pom.xml  pom.xml~  proguard.cfg  proguard.cfg~  proguard.conf  proguard-project.txt  random_degubbing_stuph.txt.log.nathan
+nbas@nbas-XPS-L521X:~/bin/37coins/v6/Btc2Sms/mobile$ 
+

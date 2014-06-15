@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="72" android:versionName="0.1.0-SNAPSHOT" package="org.btc4all.btc2sms">
+=======
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="56" android:versionName="0.1.0-SNAPSHOT" package="org.btc4all.btc2sms">
+>>>>>>> 14eea984419086878897cc2f3c3bf5862bc02327
 
     <uses-sdk android:minSdkVersion="4"/>
          

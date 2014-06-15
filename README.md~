@@ -21,8 +21,6 @@ See http://maven.apache.org/settings.html for further details on setting up your
 
 ## Nathan Notes: 
 ###Common* Errors / Annoyances: 
-
-Note that the following only apply to a release for build. 
 The proguard.conf file may be in an incorrect location. A quick hack-fix for testing would be to move it to anywhere there is a pom.xml file. 
 Building for release, using the "-P release" option for maven, will result in an error when running "jarsigner". 
 The command used to run jarsigner, if it has some of its parameters that look like series of asterisks, should have some of its options modified to fit the following : 

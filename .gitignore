@@ -13,3 +13,29 @@ target
 mobile/btc2sms/target
 mobile/btc2sms/pom.xml
 mobile/btc2sms/pom.xml
+mobile/btc2sms/pom.xml~
+
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#Items to keep unstaged for security reasons. 
+
+mobile/pom.xml~
+mobile/random_degubbing_stuph.txt.log.nathan
+mobile/nathan_build_output_stuff.txt
+mobile/nathan_keystore.keystore
+
+/mobile/pom.xml~
+/mobile/random_degubbing_stuph.txt.log.nathan
+/mobile/nathan_build_output_stuff.txt
+/mobile/nathan_keystore.keystore
