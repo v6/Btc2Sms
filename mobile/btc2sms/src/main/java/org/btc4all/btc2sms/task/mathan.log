@@ -1,0 +1,37 @@
+// 20140611 - Nathan Basanese - support@37coins.com
+// Replaced all "org.apache.http." with "android.net.http.". 
+// I have done this to fix the error thrown by proguard upon compilation for release of our Android client. 
+// The error thrown by proguard follows: 
+/*
+[INFO] Warning: library class android.net.http.AndroidHttpClient extends or implements program class org.apache.http.client.HttpClient
+[DEBUG] Note: the configuration refers to the unknown class 'com.android.vending.licensing.ILicensingService'
+[DEBUG] Note: there were 1 references to unknown classes.
+[DEBUG]       You should check your configuration for typos.
+[INFO] Warning: there were 1 instances of library classes depending on program classes.
+[INFO]          You must avoid such dependencies, since the program classes will
+[INFO]          be processed, while the library classes will remain unchanged.
+[INFO] java.io.IOException: Please correct the above warnings first.
+[INFO] 	at proguard.Initializer.execute(Initializer.java:321)
+[INFO] 	at proguard.ProGuard.initialize(ProGuard.java:211)
+[INFO] 	at proguard.ProGuard.execute(ProGuard.java:86)
+[INFO] 	at proguard.ProGuard.main(ProGuard.java:492)
+*/
+
+// My initial solution was to move everything over to the Android library. mentioned in the warning with the first INFO line. 
+// However, I have noticed that this entails some compilation difficulty. 
+// http://stackoverflow.com/questions/816858/maven-remove-a-single-transitive-dependency seems to be the best solution. 
+// I think I will try a dependency exclusion for the Android http client, since Proguard is removing org.apache.http.client.HttpClient so zealously because of its (unnecessary) presence. 
+// It's like an appendectomy. Most of the time you don't need an appendectomy, and no one really needs, as far as we know, an appendix, anyway. Still, when you need it removed, 
+// YOU NEED IT REMOVED. 
+// I am going to add something like the following to the Project Object Model for this application's build: 
+/*
+                <exclusions>
+                        <exclusion>
+                                <groupId>commons-logging</groupId>
+                                <artifactId>commons-logging</artifactId>
+                        </exclusion>
+                </exclusions>
+*/
+
+// Removed the Ilicensing service from our proguard.conf file, because http://proguard.sourceforge.net/#manual/examples.html
+// I also politely requested that proguard keep our apache stuff, just to see if that works. 
