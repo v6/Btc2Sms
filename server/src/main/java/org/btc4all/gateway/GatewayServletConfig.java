@@ -71,7 +71,6 @@ public class GatewayServletConfig extends GuiceServletContextListener {
             @Override
             protected void configureServlets(){
             	filter("/plivo*").through(PlivoAuthFilter.class);
-            	filter("/envayasms*").through(EnvayaFilter.class);
         	}
             @Provides @Singleton @SuppressWarnings("unused")
             public Cache provideHourCache(){
@@ -86,10 +85,6 @@ public class GatewayServletConfig extends GuiceServletContextListener {
                     .diskExpiryThreadIntervalSeconds(0));
                 manager.addCache(testCache);
                 return testCache;
-            }
-            @Provides @Singleton @SuppressWarnings("unused")
-            public EnvayaFilter provideEnvayaFilter(){
-                return new EnvayaFilter(GatewayServletConfig.envayaPassword, GatewayServletConfig.basePath);
             }
             @Provides @Singleton @SuppressWarnings("unused")
             public ConnectionFactory provideAmqpChannel() throws IOException{
