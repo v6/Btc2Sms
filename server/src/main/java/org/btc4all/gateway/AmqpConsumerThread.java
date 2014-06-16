@@ -77,6 +77,13 @@ public class AmqpConsumerThread extends Thread {
                 } catch (ShutdownSignalException | ConsumerCancelledException| InterruptedException | IOException e) {
                     e.printStackTrace();
                     isActive = false;
+                } finally{
+                    if (null!=connection){
+                        try {
+                            connection.close();
+                        } catch (IOException e) {
+                        }
+                    }
                 }
             }
             System.out.println("amqp connection closed");

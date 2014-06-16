@@ -56,14 +56,6 @@ public class EnvayaClient {
         this.digestToken = digestToken;
         this.httpClient = httpClient;
     }
-    
-    public static void main(String[] args) throws EnvayaClientException, InterruptedException {
-        EnvayaClient ec = new EnvayaClient("https://qa.37coins.com/envayasms/UC5SD1KCTDLG7L08/sms", "bY7LD8qcGFvE", "+16572253735");
-        System.out.println(ec.test());
-        ec.incoming("+15168176643", MessageType.SMS, "bal", System.currentTimeMillis());
-//        Thread.sleep(1000);
-//        ec.outgoing();
-    }
 
     protected <K> K parsePayload(HttpResponse response, Class<K> entityClass)
             throws EnvayaClientException {
