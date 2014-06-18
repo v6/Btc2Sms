@@ -8,13 +8,34 @@ EnvayaSMS architecture was a central control server. The objective is to get rid
 
 ## Build
 
+enter the "mobile" directory
 set `<sdk><path>` in `mobile/pom.xml`, then build with `mvn clean install`
+
+If you want a different way to set your `<sdk><path>`, here is a link to some instructions on how to set your <sdk><path> in your .m2/settings.xml: 
+code.google.com/p/playn/wiki/MavenAndroidBuild. 
+
+## Build for Release
+
+###Here is all you need to start a release build:
+
+###Step 1: go to mobile/btc2sms
+
+###Step 2:
+mvn install -P release -Dsign.keystore=REPLACEWITHPATHTOKEYSTORE -Dsign.alias=REPLACEWITHALIAS -Dsign.storepass=REPLACEWITHKEYSTOREPASSWORD -Dsign.keypass=REPLACEWITHKEYPASSWORD
+
+For example:
+-Dsign.keystore=/home/dmitrycrocodilys/37coins_client/secure_area/37coins_dummy_keystore.keystore
+-Dsign.alias=37dev
+-Dsign.storepass="KeYsToRe PaSsWoRd GoEs HeRe"
+-Dsign.keypass="37DeV KeY PaSsWoRd GoEs HeRe"
+
+http://developer.android.com/tools/publishing/app-signing.html
 
 ## Tip4Commit
 
 [![tip for next commit](http://tip4commit.com/projects/530.svg)](http://tip4commit.com/projects/530)
 
-## Old
+## Old EnvayaSMS README.md
 
 
 EnvayaSMS is an Android app that acts as a SMS and MMS gateway. 
