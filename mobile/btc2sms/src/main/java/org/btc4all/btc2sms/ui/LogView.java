@@ -192,7 +192,7 @@ public class LogView extends Activity {
         }
         loginWebView.addJavascriptInterface(new AndroidJS(), "Android");
 
-        loginWebView.loadUrl("https://www.37coins.com/gateways?noHead=true");
+        loginWebView.loadUrl("https://www.37coins.com/gateways?noHead=true"); //Here is one of the places where you change the server that the app connects to. --Mathan 20140617
         Log.d("TEST", "pre load finish");
     }
 
